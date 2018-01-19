@@ -1,11 +1,7 @@
 <?php
-/* header para Smarty */
 define('CONFIG_DIR', $_SERVER['DOCUMENT_ROOT'].'/config/');
 require_once(CONFIG_DIR . 'setupadmin.php');
-/*  Fin header para Smarty */
 
-// Index de Banner
-include_once(CONFIG_DIR . 'conexion.inc.php');
 include_once(CONFIG_DIR . 'class.login.php');
 include_once(CONFIG_DIR . 'class.faq.php');
 
@@ -19,7 +15,7 @@ if($faq->mensaje!="si"){
 }
 
 if(isset($_GET['error']) && $_GET['error']!="")
-	$error="<tr><td align='center' colspan='7' class='error'>No es posible eliminar éste enlace ya que existen contenidos asociados a él!</td></tr>";
+	$error="<tr><td align='center' colspan='7' class='error'>No es posible eliminar Ã©ste enlace ya que existen contenidos asociados a Ã©l!</td></tr>";
 
 /* footer para Smarty */
 $smarty->assign('nombre', $_SESSION['nombre_temp']);
@@ -35,5 +31,3 @@ $smarty->assign("mensaje", $mensaje);
 if(isset($_GET['error']) && $_GET['error']!="")
 	$smarty->assign("error", $error);
 $smarty->display('admin/faq/lista_faq.tpl');
-/* Fin footer para Smarty */
-?>

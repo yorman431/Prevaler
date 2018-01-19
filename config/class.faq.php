@@ -143,43 +143,51 @@ class Faq{
   }
 
   function mostrar_faq(){
-    /*Metodo para mostrar la categoria seleccionada */
     if (isset($_GET['id']) && $_GET['id']!=""){
-      $id=$_GET['id'];
-      $sql="SELECT * FROM faq WHERE id_faq='$id'";
-      $consulta=mysql_query($sql);
-      $resultado = mysql_fetch_array($consulta);
-      $this->id=$id;
-      $this->pregunta=$resultado['pregunta_faq'];
-      $this->padre=$resultado['padre_faq'];
-      $this->respuesta=$resultado['respuesta_faq'];
-      $this->prioridad=$resultado['prioridad_faq'];
-      $this->crearArbol('faq','id_faq','pregunta_faq','padre_faq',0,'&mdash;');
-      //print_r($this->listado);
+      $sql="SELECT * FROM faq WHERE id_faq = ?";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $_GET['id']);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($faq = $query->fetch()){
+          $this->id = $_GET['id'];
+          $this->pregunta = $faq['pregunta_faq'];
+          $this->padre = $faq['padre_faq'];
+          $this->respuesta = $faq['respuesta_faq'];
+          $this->prioridad = $faq['prioridad_faq'];
+        }
+        $this->crearArbol('faq','id_faq','pregunta_faq','padre_faq',0,'&mdash;');
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }
   }
 
-  //function crearArbol($tabla,$id_field,$show_data,$link_field,$parent,$prefix){
   function crearArbol($tabla,$id_field,$show_data,$link_field,$parent,$prefix){
-    /*Armar query*/
-    $sql='SELECT *,id_faq AS ruta FROM '.$tabla.' WHERE '.$link_field.'='.$parent.' GROUP BY '.'pregunta_faq, prioridad_faq';
-    /*Asumiendo que se usa MySQL (se puede cambiar facilmente a otra db)*/
+    $sql='SELECT *, id_faq AS ruta FROM '.$tabla.' WHERE '.$link_field.'='.$parent.' GROUP BY pregunta_faq, prioridad_faq';
 
-    $consulta=@mysql_query($sql) or die(mysql_error());
-    if($consulta){
-      /*Recorrer todos las entradas */
-      while($resultado=mysql_fetch_array($consulta)){
-        /* Imprimir campo a mostrar*/
-        //echo($prefix.$resultado[$show_data].'<br>');
-        $resultado[$show_data]=$prefix."&raquo; ".$resultado[$show_data];
-        //$this->buscar_ruta_nodo($resultado['id_cat']);
-        //$resultado['ruta']=$this->ruta;
-        $this->listado[] = $resultado;
+    try{
+      $query = $this->connection->prepare($sql);
 
-        /* imprimir arbol the "hijos" de este elemento*/
-        $this->crearArbol($tabla,$id_field,$show_data,
-          $link_field,$resultado[$id_field],$prefix.$prefix);
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($resultados = $query->fetchAll()){
+        foreach ($resultados as &$resultado){
+          $resultado[$show_data]=$prefix."&raquo; ".$resultado[$show_data];
+          $this->crearArbol($tabla, $id_field, $show_data, $link_field, $resultado[$id_field],$prefix.$prefix);
+        }
+        $this->listado = $resultados;
       }
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
     }
   }
 
@@ -217,37 +225,100 @@ class Faq{
   }
 
   function insertar_faq(){
-    /*Metodo para insertar una categoria */
     $this->accion="Datos de Pregunta";
     if (isset($_POST['envio']) && $_POST['envio']=="Guardar"){
       $this->asignar_valores();
-      $sql="SELECT * FROM faq WHERE pregunta_faq='$this->pregunta' AND padre_faq='$this->padre'";
-      $consulta=mysql_query($sql) or die(mysql_error());
-      if($resultado=mysql_fetch_array($consulta)){
-        $this->mensaje=1;
-      }else{
-        $sql="INSERT INTO faq VALUES (NULL, '$this->pregunta', '$this->padre', '$this->respuesta', '$this->prioridad')";
-        $consulta=mysql_query($sql) or die(mysql_error());
-        header("location:/admin/faq/");
+      $sql="SELECT COUNT(*) FROM faq WHERE pregunta_faq='$this->pregunta' AND padre_faq='$this->padre'";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $this->pregunta);
+        $query->bindParam(2, $this->padre);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        $fila = $query->fetchColumn();
+        if ($fila > 0){
+          $this->mensaje = 1;
+        }else{
+          header("location:/admin/faq/");
+          $sql="INSERT INTO faq (pregunta_faq, padre_faq, respuesta_faq, prioridad_faq) VALUES ( ?, ?, ?, ?)";
+
+          try{
+            unset($query);
+
+            $query = $this->connection->prepare($sql);
+
+            $query->bindParam(1, $this->pregunta);
+            $query->bindParam(2, $this->padre);
+            $query->bindParam(3, $this->respuesta);
+            $query->bindParam(4, $this->prioridad);
+
+            $query->execute();
+
+            $this->connection->Close();
+          }catch (PDOException $e){
+            echo 'Error code: '.$e->getMessage();
+          }
+        }
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
       }
     }
     $this->crearArbol('faq','id_faq','pregunta_faq','padre_faq',0,'&mdash;');
   }
 
   function editar_faq(){
-    /*Metodo para editar una categoria */
     $this->accion="Editando Datos de Pregunta";
     if (isset($_POST['envio']) && $_POST['envio']=="Guardar" && isset($_GET['id']) && $_GET['id']!=""){
-      $id=$_GET['id'];
       $this->asignar_valores();
-      $sql="SELECT * FROM faq WHERE pregunta_faq='$this->pregunta' AND id_faq!='$id'";
-      $consulta=mysql_query($sql) or die(mysql_error());
-      if($resultado=mysql_fetch_array($consulta)){
-        $this->mensaje=1;
-      }else{
-        $sql="UPDATE faq SET pregunta_faq='$this->pregunta', padre_faq='$this->padre', respuesta_faq='$this->respuesta', prioridad_faq='$this->prioridad' WHERE id_faq='$id'";
-        $consulta=mysql_query($sql) or die(mysql_error());
-        header("location:/admin/faq/");
+
+      $sql="SELECT COUNT(*) FROM faq WHERE pregunta_faq = ? AND id_faq != ?";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $this->pregunta);
+        $query->bindParam(2, $_GET['id']);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        $fila = $query->fetchColumn();
+
+        if ($fila > 0){
+          $this->mensaje = 1;
+        }else{
+          $sql="UPDATE faq SET 
+                  pregunta_faq = ?,
+                  padre_faq = ?,
+                  respuesta_faq = ?,
+                  prioridad_faq = ? 
+                WHERE id_faq = ?";
+
+          try{
+            header("location:/admin/faq/");
+            $query = $this->connection->prepare($sql);
+
+            $query->bindParam(1, $this->pregunta);
+            $query->bindParam(2, $this->padre);
+            $query->bindParam(3, $this->respuesta);
+            $query->bindParam(4, $this->prioridad);
+            $query->bindParam(5, $_GET['id']);
+
+            $query->execute();
+
+            $this->connection->Close();
+          }catch (PDOException $e){
+            echo 'Error code: '.$e->getMessage();
+          }
+        }
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
       }
     }else{
       $this->mostrar_faq();
@@ -255,22 +326,55 @@ class Faq{
   }
 
   function eliminar_faq(){
-    /*Metodo para eliminar una categoria */
-    $id=$_GET['id'];
-    $sql="SELECT id_faq FROM faq WHERE padre_faq='$id'";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    if($resultado=mysql_fetch_array($consulta)){
-      while($resultado=mysql_fetch_array($consulta)){
-        $id2=$resultado['id_faq'];
-        $sql="DELETE FROM faq WHERE id_faq='$id2'";
-        $consulta=mysql_query($sql) or die(mysql_error());
+    $sql = "SELECT id_faq FROM faq WHERE padre_faq = ?";
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $_GET['id']);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($faqs = $query->fetchAll()){
+        $sql = 'DELETE FROM faq WHERE id_faq = ?';
+        foreach ($faqs as &$faq){
+          try{
+            unset($query);
+
+            $query = $this->connection->prepare($sql);
+
+            $query->bindParam(1, $faq['id_faq']);
+
+            $query->execute();
+
+            $this->connection->Close();
+          }catch (PDOException $e){
+            echo 'Error code: '.$e->getMessage();
+          }
+        }
       }
-
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
     }
-    $sql="DELETE FROM faq WHERE id_faq='$id'";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    header("location:/admin/faq/");
 
+    $sql="DELETE FROM faq WHERE id_faq = ?";
+
+    try{
+      header("location:/admin/faq/");
+      unset($query);
+
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $_GET['id']);
+
+      $query->execute();
+
+      $this->connection->Close();
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
   }
 
   function get_faq($id){
@@ -282,7 +386,6 @@ class Faq{
   }
 
   function modificar_url($url) {
-    // Tranformamos todo a minusculas
     $url = strtolower($url);
     //Rememplazamos caracteres especiales latinos
     $find = array(' ');
@@ -305,4 +408,3 @@ class Faq{
     return $url;
   }
 }
-?>

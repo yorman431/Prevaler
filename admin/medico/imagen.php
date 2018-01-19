@@ -1,11 +1,7 @@
 <?php
-/* header para Smarty */
 define('CONFIG_DIR', $_SERVER['DOCUMENT_ROOT'].'/config/');
 require_once(CONFIG_DIR . 'setupadmin.php');
-/*  Fin header para Smarty */
 
-// Insertar Imagen Contenido
-include_once(CONFIG_DIR . 'conexion.inc.php');
 include_once(CONFIG_DIR . 'class.galeria.php');
 
 session_start();
@@ -31,5 +27,3 @@ $smarty->assign("carpeta", "medico");
 $smarty->assign("mensaje", $mensaje);
 $smarty->assign("id", $_GET['id']);
 $smarty->display('admin/medico/imagen.tpl');
-/* Fin footer para Smarty */
-?> 

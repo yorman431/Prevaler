@@ -1,11 +1,7 @@
 <?php
-/* header para Smarty */
 define('CONFIG_DIR', $_SERVER['DOCUMENT_ROOT'].'/config/');
-require_once(CONFIG_DIR . 'setupadmin.php');
-/*  Fin header para Smarty */
 
-// Editar Contenido
-include_once(CONFIG_DIR . 'conexion.inc.php');
+require_once(CONFIG_DIR . 'setupadmin.php');
 include_once(CONFIG_DIR . 'class.login.php');
 include_once(CONFIG_DIR . 'class.medico.php');
 include_once(CONFIG_DIR . 'class.facilidad.php'); 

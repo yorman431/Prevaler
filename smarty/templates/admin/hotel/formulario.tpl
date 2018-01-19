@@ -117,6 +117,11 @@
                     <input name="ubicacion" type="text" class="form-control"  placeholder="Ubicación de la Sede" id="ubicacion" value="{$ubicacion}" required="required"/>
                   </div>
 
+                  <div class="form-group">
+                    <label for="contenido">Descripción</label>
+                    <textarea name="contenido" cols="70" rows="6" class="normalContenido" id="contenido"  wrap="physical" required="required">{$descripcion}</textarea>
+                  </div>
+
                   {if isset($id)}
                     <div id="servicios">
                       <label for="servTitulo">Servicios</label>
@@ -141,16 +146,6 @@
                       </div>
                     </div>
                   {/if}
-
-                  <div class="form-group">
-                    <label for="contenido">Descripción</label>
-                    <textarea name="contenido" cols="70" rows="6" class="normalContenido" id="contenido"  wrap="physical" required="required">{$descripcion}</textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="condiciones">Condiciones</label>
-                    <textarea name="condiciones" cols="70" rows="6" class="normalContenido" id="condiciones" wrap="physical" required="required">{$condiciones}</textarea>
-                  </div>
 
                   <div class="form-group">
                     <label for="claves">Claves</label>

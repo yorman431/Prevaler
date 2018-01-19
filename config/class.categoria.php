@@ -284,7 +284,6 @@ class Categoria{
 	}
 
 	function modificar_url($url) {
-		// Tranformamos todo a minusculas
 		$url = strtolower($url);
 		//Rememplazamos caracteres especiales latinos
 		$find = array(' ');

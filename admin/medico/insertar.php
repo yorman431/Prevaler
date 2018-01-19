@@ -1,11 +1,7 @@
 <?php
-/* header para Smarty */
 define('CONFIG_DIR', $_SERVER['DOCUMENT_ROOT'].'/config/');
 require_once(CONFIG_DIR . 'setupadmin.php');
-/*  Fin header para Smarty */
 
-// Insertar medico
-include_once(CONFIG_DIR . 'conexion.inc.php');
 include_once(CONFIG_DIR . 'class.login.php');
 include_once(CONFIG_DIR . 'class.medico.php'); 
 include_once(CONFIG_DIR . 'class.facilidad.php'); 
@@ -23,8 +19,6 @@ $facilidad->listar_facilidad();
 $hotel = new Hotel;
 $hotel->listar_hotel();
 
-
-
 if($medico->mensaje2==2){
 	$mensaje="<div class='alert alert-danger'>El nombre del Especialista que usted esta insertando ya existe en el sistema</div>";
 	$smarty->assign("enlace", 8);
@@ -32,7 +26,6 @@ if($medico->mensaje2==2){
     $mensaje="<div class='alert alert-success'>El Especialista se ha insertando con exito</div>";
 }
 
-/* footer para Smarty */
 $smarty->assign('nombre', $_SESSION['nombre_temp']);
 $smarty->assign('apellido', $_SESSION['apellido_temp']);
 $smarty->assign('id_usuario', $_SESSION['id_temp']);
@@ -48,5 +41,3 @@ $smarty->assign("accion", $medico->accion);
 $smarty->assign("sede", $medico->sede);
 $smarty->assign("especialidad", $medico->especialidad);
 $smarty->display('admin/medico/formulario.tpl');
-/* Fin footer para Smarty */
-?> 
