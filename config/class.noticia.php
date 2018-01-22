@@ -41,6 +41,7 @@ class Noticia{
       }
       return $conv_fecha;
     }
+    return 'Error valor $CampoFecha';
   }
 
   function asignar_valores(){
@@ -60,23 +61,67 @@ class Noticia{
       $_SESSION['buscar']=$_POST['buscar'];
 
     if (isset($_SESSION['buscar']) && $_SESSION['buscar']!=""){
-      $this->buscar=$_SESSION['buscar'];
+      $this->buscar = '%'.$_SESSION['buscar'].'%';
+
       $sql="SELECT * FROM noticia WHERE
-			(categoria_not LIKE '%' '".$_SESSION['buscar']."' '%' OR
-			titulo_not LIKE '%' '".$_SESSION['buscar']."' '%' OR
-			subtitulo_not LIKE '%' '".$_SESSION['buscar']."' '%' OR
-			fecha_not LIKE '%' '".$_SESSION['buscar']."' '%' OR
-			autor_not LIKE '%' '".$_SESSION['buscar']."' '%' OR
-			contenido_not LIKE '%' '".$_SESSION['buscar']."' '%')
-			ORDER BY id_not DESC";
+             (categoria_not LIKE ? OR
+             titulo_not LIKE ? OR
+             subtitulo_not LIKE ? OR
+             fecha_not LIKE ? OR
+             autor_not LIKE ? OR
+             contenido_not LIKE ?)
+             ORDER BY id_not DESC";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $this->buscar);
+        $query->bindParam(2, $this->buscar);
+        $query->bindParam(3, $this->buscar);
+        $query->bindParam(4, $this->buscar);
+        $query->bindParam(5, $this->buscar);
+        $query->bindParam(6, $this->buscar);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($noticias = $query->fetchAll()){
+          $this->mensaje = 'si';
+
+          foreach ($noticias as &$noticia){
+            $noticia['fecha_not'] = $this->convertir_fecha($noticia['fecha_not']);
+          }
+
+          $this->listado = $noticias;
+        }
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }else{
       $sql="SELECT * FROM noticia ORDER BY id_not DESC";
-    }
-    $consulta=mysql_query($sql);
-    while ($resultado = mysql_fetch_array($consulta)){
-      $resultado['fecha_not'] = $this->convertir_fecha($resultado['fecha_not']);
-      $this->mensaje="si";
-      $this->listado[] = $resultado;
+
+      try{
+        unset($query);
+
+        $query = $this->connection->prepare($sql);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($noticias = $query->fetchAll()){
+          $this->mensaje = 'si';
+
+          foreach ($noticias as &$noticia){
+            $noticia['fecha_not'] = $this->convertir_fecha($noticia['fecha_not']);
+          }
+
+          $this->listado = $noticias;
+        }
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }
   }
 
@@ -180,27 +225,52 @@ class Noticia{
   }
 
   function mostrar_noticia(){
-    /*Metodo para mostrar un usuario seleccionado */
     if (isset($_GET['id']) && $_GET['id']!=""){
-      $id=$_GET['id'];
-      $sql="SELECT * FROM noticia WHERE id_not='$id'";
-      $consulta=mysql_query($sql);
-      $resultado = mysql_fetch_array($consulta);
-      $this->id=$id;
-      $this->categoria = $resultado['categoria_not'];
-      $this->titulo = $resultado['titulo_not'];
-      $this->subtitulo = $resultado['subtitulo_not'];
-      $this->contenido = $resultado['contenido_not'];
-      $this->fecha = $this->convertir_fecha($resultado['fecha_not']);
-      $this->hora = $resultado['hora_not'];
-      $this->autor = $resultado['autor_not'];
 
-      $sql2="SELECT * FROM imagen WHERE galeria_image = '$id' AND tabla_image='noticia'";
-      $consulta2 = mysql_query($sql2);
-      while($resultado2 = mysql_fetch_array($consulta2)){
-        $this->listado[] = $resultado2;
+      $sql="SELECT * FROM noticia WHERE id_not = ?";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $_GET['id']);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($noticia = $query->fetch()){
+          $this->id = $_GET['id'];
+          $this->categoria = $noticia['categoria_not'];
+          $this->titulo = $noticia['titulo_not'];
+          $this->subtitulo = $noticia['subtitulo_not'];
+          $this->contenido = $noticia['contenido_not'];
+          $this->fecha = $this->convertir_fecha($noticia['fecha_not']);
+          $this->hora = $noticia['hora_not'];
+          $this->autor = $noticia['autor_not'];
+
+          $tabla = 'noticia';
+          $sql = "SELECT * FROM imagen WHERE galeria_image = ? AND tabla_image = ?";
+
+          try{
+            unset($query);
+
+            $query = $this->connection->prepare($sql);
+
+            $query->bindParam(1, $this->id);
+            $query->bindParam(2, $tabla);
+
+            $query->execute();
+
+            $this->connection->Close();
+
+            $this->listado = $query->fetchAll();
+          }catch (PDOException $e){
+            echo 'Error code: '.$e->getMessage();
+          }
+        }
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
       }
-
     }
   }
 
@@ -214,43 +284,112 @@ class Noticia{
   }
 
   function insertar_noticia(){
-    /*Metodo para editar un usuario seleccionado */
     $this->accion="Datos de la Noticia";
     if (isset($_POST['envio']) && $_POST['envio']=="Guardar"){
       $this->asignar_valores();
       $this->fecha = $this->convertir_fecha($this->fecha);
-      $sql="INSERT INTO noticia VALUES ('', '$this->categoria', '$this->titulo', '$this->subtitulo', '$this->contenido', '$this->fecha', '$this->hora', '$this->autor')";
-      $consulta=mysql_query($sql) or die(mysql_error());
-      header("location:/admin/noticia/");
+
+
+      $sql="INSERT INTO noticia (categoria_not, titulo_not, subtitulo_not, contenido_not, fecha_not, hora_not, autor_not) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+      try{
+        header("location:/admin/noticia/");
+
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $this->categoria);
+        $query->bindParam(2, $this->titulo);
+        $query->bindParam(3, $this->subtitulo);
+        $query->bindParam(4, $this->contenido);
+        $query->bindParam(5, $this->fecha);
+        $query->bindParam(6, $this->hora);
+        $query->bindParam(7, $this->autor);
+
+        $query->execute();
+
+        $this->connection->Close();
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }
   }
 
   function editar_noticia(){
-    /*Metodo para editar un usuario seleccionado */
     $this->accion="Editando Datos de la Noticia";
     if (isset($_POST['envio']) && $_POST['envio']=="Guardar" && isset($_GET['id']) && $_GET['id']!=""){
-      $id=$_GET['id'];
+
       $this->asignar_valores();
       $this->fecha = $this->convertir_fecha($this->fecha);
-      $sql="UPDATE noticia SET categoria_not='$this->categoria', titulo_not='$this->titulo', subtitulo_not='$this->subtitulo', contenido_not='$this->contenido', fecha_not='$this->fecha', hora_not='$this->hora', autor_not='$this->autor' WHERE id_not='$id'";
-      $consulta=mysql_query($sql) or die(mysql_error());
-      header("location:/admin/noticia/");
+
+      $sql = "UPDATE noticia SET 
+                categoria_not = ?,
+                titulo_not = ?,
+                subtitulo_not = ?,
+                contenido_not = ?,
+                fecha_not = ?,
+                hora_not = ?,
+                autor_not = ?
+              WHERE id_not = ?";
+
+      try{
+        header("location:/admin/noticia/");
+
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $this->categoria);
+        $query->bindParam(2, $this->titulo);
+        $query->bindParam(3, $this->subtitulo);
+        $query->bindParam(4, $this->contenido);
+        $query->bindParam(5, $this->fecha);
+        $query->bindParam(6, $this->hora);
+        $query->bindParam(7, $this->autor);
+        $query->bindParam(8, $_GET['id']);
+
+        $query->execute();
+
+        $this->connection->Close();
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }else{
       $this->mostrar_noticia();
     }
   }
 
   function eliminar_noticia(){
-    /*Metodo para eliminar un usuario seleccionado */
-    $id=$_GET['id'];
-    $sql="DELETE FROM noticia WHERE id_not='$id'";
+    $sql = "DELETE FROM noticia WHERE id_not = ?";
+
+    try{
+      header("location:/admin/noticia/");
+
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $_GET['id']);
+
+      $query->execute();
+
+      $this->connection->Close();
+    }catch (PDOException $e) {
+      echo 'Error code: ' . $e->getMessage();
+    }
+
     $carpeta="noticia";
-    $consulta=mysql_query($sql) or die(mysql_error());
+    $sql="DELETE FROM imagen WHERE galeria_image = ? AND tabla_image = ?";
 
-    $sql="DELETE FROM imagen WHERE galeria_image='$id' AND tabla_image='$carpeta'";
-    $consulta2=mysql_query($sql) or die(mysql_error());
+    try{
+      unset($query);
 
-    header("location:/admin/noticia/");
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $_GET['id']);
+      $query->bindParam(2,  $carpeta);
+
+      $query->execute();
+
+      $this->connection->Close();
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
   }
 }
-?>

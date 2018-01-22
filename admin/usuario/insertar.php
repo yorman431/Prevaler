@@ -1,11 +1,7 @@
 <?php
-/* header para Smarty */
 define('CONFIG_DIR', $_SERVER['DOCUMENT_ROOT'].'/config/');
 require_once(CONFIG_DIR . 'setupadmin.php');
-/*  Fin header para Smarty */
 
-// Insertar de Usuario
-include_once(CONFIG_DIR . 'conexion.inc.php');
 include_once(CONFIG_DIR . 'class.login.php');
 include_once(CONFIG_DIR . 'class.usuario.php'); 
 
@@ -33,5 +29,3 @@ $smarty->assign("nivel", $usuario->nivel);
 $smarty->assign("accion", $usuario->accion);
 $smarty->assign("mensaje", $mensaje);
 $smarty->display('admin/usuario/formulario.tpl');
-/* Fin footer para Smarty */
-?> 
