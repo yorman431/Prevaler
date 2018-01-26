@@ -11,17 +11,17 @@
     <div class="col-xs-12 titulo" align="center">
       <span class="fuente_morada">NOTICIAS</span>
     </div>  
-    <div class="col-xs-10 col-xs-push-1 col-xs-pull-1">
-      <div class="col-xs-12 col-md-5" align="right">
-        <img class="img-responsive" src="/imagenes/{$noticia.directorio_image}">
-      </div>
-      <div class="col-xs-12 col-md-6">
-        <h2 class="fuente_verde">{$noticia.titulo_not}</h2>
-        <p class="fuente_gris lead">{$noticia.contenido_not}</p>
-      </div>
-      <div class="col-xs-12" align="center">
+    <div class="col-xs-10 col-xs-push-1 col-xs-pull-1" align="left">
+      <h3 class="fuente_morada">
+        <i class="fa fa-circle" aria-hidden="true"></i>
+        {$noticia.titulo_not}
+      </h3>
+      <h4 class="fuente_morada">{$noticia.autor_not}</h4>
+      <hr class="color_morado">
+       {$noticia.contenido_not}
+    </div>
+    <div class="col-xs-12" align="center">
         <a href="" onclick="history.back()" class="btn-info">VOLVER</a>
-      </div>
     </div>     
   </div>
 
@@ -34,7 +34,119 @@
 
   <div class="row contacto">  <!-- Contenedor de Contacto-->
 
-     {include file="layout/contacto.tpl"}
+    <div class="col-xs-12" id="contacto">
+      <div class="row">
+
+        <hr class="color_morado">
+
+        <div class="col-xs-12 titulo" align="center">
+          <span class="fuente_morada">CONTACTO</span>
+        </div>
+
+        <div class="col-md-6">
+          <form class="form-horizontal" role="form" action="/noticia_detalle.php#contacto" method="post" name="contact" id="contact">
+            <div class="panel panel-default panel-contacto">
+              <div class="panel-heading"></div>
+            
+              <div class="panel-body">
+          
+                <div class="form-group col-xs-10 col-xs-pull-1 col-xs-push-1  no_padding1">
+                  <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+                  <input  type="text" name="nombre" id="nombre" placeholder="Nombre / Empresa" value="" required="required">
+                </div>
+            
+                <div class="form-group col-xs-10 col-xs-pull-1 col-xs-push-1  no_padding1">
+                  <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+                  <input  type="text" name="telefono" id="telefono" placeholder="Teléfono" value="" required="required">
+                </div>
+          
+                <div class="form-group col-xs-10 col-xs-pull-1 col-xs-push-1  no_padding1">
+                  <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+                  <input  type="email" id="email" name="email" placeholder="Email" value="" required="required">
+                </div>
+           
+                <div class="form-group col-xs-10 col-xs-pull-1 col-xs-push-1  no_padding1">
+                  <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+                  <select id="sede" name="sede" required="required">
+                    <option selected hidden value="">Seleccione la Sede</option>
+                    {section name=i  loop=$sede}
+                      <option value="{$sede[i].nombre_sede}">{$sede[i].nombre_sede}</option>
+                    {/section}
+                  </select>
+                </div>
+           
+                <div class="form-group col-xs-10 col-xs-pull-1 col-xs-push-1  no_padding1">
+                  <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+                  <input type="text" rows="3" name="comentario" id="comentario" placeholder="Mensaje" value="" required="required">
+                </div>
+  
+              </div>
+
+              <div class="panel-footer" align="right">
+                <div  class="col-xs-11 no_padding1">
+                  <button onclick="javascript: return validarformulario();" name="enviar" type="submit" id="enviar" value="Enviar1" class="btn-info">Enviar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <h4 class="fuente_morada">{$mensaje2}</h4>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row"  align="center">
+
+            <span class="subrayado">
+            <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+            Sede Caracas
+            <i class="fa fa-phone fa-lg fuente_morada" aria-hidden="true"></i>
+            (0500 773.86.33)
+            <i class="fa fa-envelope fuente_morada" aria-hidden="true"></i>
+            caracas@prevaler.com
+            </span>
+
+            <span class="subrayado">
+            <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+            Sede Maracay
+            <i class="fa fa-phone fa-lg fuente_morada" aria-hidden="true"></i>
+            (0500 773.82.53)
+            <i class="fa fa-envelope fuente_morada" aria-hidden="true"></i>
+            maracay@prevaler.com
+            </span>
+
+            <span class="subrayado">
+            <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+            Sede Porlamar
+            <i class="fa fa-phone fa-lg fuente_morada" aria-hidden="true"></i>
+            (0295 400.94.00)
+            <i class="fa fa-envelope fuente_morada" aria-hidden="true"></i>
+            porlamar@prevaler.com
+            </span>
+
+            <span class="subrayado">
+            <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+            Sede Valencia Norte
+            <i class="fa fa-phone fa-lg fuente_morada" aria-hidden="true"></i>
+            (0500 773.82.53)
+            <i class="fa fa-envelope fuente_morada" aria-hidden="true"></i>
+            valencianorte@prevaler.com
+            </span>
+
+            <span>
+            <i class="fa fa-circle fuente_morada" aria-hidden="true"></i>
+            Sede Valencia Sur
+            <i class="fa fa-phone fa-lg fuente_morada" aria-hidden="true"></i>
+            (0500 773.82.53)
+            <i class="fa fa-envelope fuente_morada" aria-hidden="true"></i>
+            valenciasur@prevaler.com
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>        <!-- Fin del Contenedor de Contacto-->
 

@@ -628,12 +628,24 @@ class Link{
   }
 
   public function get_name($id){
-    /*Metodo para obtener el nombre de una categoria */
-    $sql="SELECT nombre_cat FROM link WHERE id_cat='$id'";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    $resultado=mysql_fetch_array($consulta);
+    $sql = "SELECT nombre_cat FROM link WHERE id_cat = ?";
 
-    return $resultado['nombre_cat'];
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1,$id);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($nombre = $query->fetch())
+        return $nombre['nombre_cat'];
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+
+    return 'Error get_name, id no ingresado';
   }
 
   //function crearArbol($tabla,$id_field,$show_data,$link_field,$parent,$prefix){
@@ -660,4 +672,3 @@ class Link{
   }
 
 }
-?>

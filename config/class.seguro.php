@@ -59,6 +59,24 @@ class Seguro{
     }
   }
 
+  function listar_seguro_publico(){
+    $sql="SELECT * FROM aseguradora ORDER BY nombre_seg";
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($this->listado = $query->fetchAll()){
+        $this->mensaje = 'si';
+      }
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+  }
+
   function mostrar_seguro(){
     if (isset($_GET['id']) && $_GET['id']!=""){
       $sql="SELECT * FROM aseguradora WHERE id_seg = ?";

@@ -281,13 +281,20 @@ class Hotel{
   }
 
   function listar_hotel_cita(){
-    /* Metodo para listar los usuarios y sus opciones. */
     $sql="SELECT id_sede, nombre_sede FROM sede GROUP BY id_sede ORDER BY prioridad_sede ASC";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    while ($resultado = mysql_fetch_array($consulta)){
-      //
-      $this->mensaje="si";
-      $this->listado[] = $resultado;
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($this->listado = $query->fetchAll())
+        $this->mensaje = 'si';
+
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
     }
   }
 

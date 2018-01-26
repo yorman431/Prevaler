@@ -34,7 +34,6 @@
 <link href="/css/navbar-fixed-top.css" rel="stylesheet">
 <link href="/css/personalizado/personalizado.css" rel="stylesheet">
 <script src="/js/jquery.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHV-QZyvPzbYOCNlxyW-Dx1f74G5AVZXE&libraries=places&callback=initMap" async defer></script>
 <link  href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="/lightbox-master/dist/ekko-lightbox.css" media="screen">
 <script src="/lightbox-master/dist/ekko-lightbox.js"></script>

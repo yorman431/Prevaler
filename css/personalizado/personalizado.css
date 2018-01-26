@@ -30,7 +30,7 @@
   font-style: normal;
 }
 
-@media (min-width: 2500px){
+@media (min-width: 2501px){
 
   /*-------- Botonera ---------*/
 
@@ -57,25 +57,24 @@
   }
 
   .navbar-right > li{
-    margin: 15px 10px 0px 10px;
+    margin: 10px 10px 0px 10px; 
   }
 
   .navbar-right > .color_morado{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
     padding: 20px 10px 16px 10px;
     border: 1px solid #504c6a;
   }
 
   .navbar-right > .color_morado:last-child{
-    margin: 0px 0px 0px 0px;
-    padding: 20px 20px 18px 20px;
-    border: 1px solid #504c6a;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .navbar-collapse > .navbar-right > li > a > h5{
     background-color: #504c6a;
     color: #ffffff;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
   }
 
   .navbar-collapse > .navbar-right > li > h2{
@@ -96,6 +95,22 @@
   .navbar-default .botonera > .active > a:focus > .seleccionado{
     padding-right: 8px;
   }
+
+  /*------------ Banner -----------*/
+
+  #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a >img {
+    height: 40em;
+  }
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 50px;
+    }
+
 
   /*-------- Sedes ---------*/
 
@@ -118,21 +133,31 @@
     padding: 21em 30px;
   }
 
+  #banner_sede img, #map{
+    height: 40em;
+  }
+
 
   /*-------- Contenido ---------*/
 
   .conten .col-md-4{
-    font-size: 23px;
+    font-size: 26px;
     letter-spacing: 7px;
-    padding: 13px 0px 13px 0px;
+    padding: 20px 0px 19px 0px;
   }
 
   .conten .col-md-8{
-    padding: 19px 0px 19px 0px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
   }
 
 
   /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.2% 70px 5.2%;
+  }
 
 
   /*-------- Contacto ---------*/
@@ -140,7 +165,7 @@
   .contacto .col-md-6 > .row > span{
     font-size: 20px;
   }
-
+  
 }
 
 @media (min-width: 2000px) and (max-width: 2500px){
@@ -148,15 +173,15 @@
   /*-------- Botonera ---------*/
 
   .navbar-collapse > .navbar-nav > li > a,
-  .navbar-default .navbar-nav > .active > a{
-    font-size: 16px;
-  }
+.navbar-default .navbar-nav > .active > a{
+  font-size: 16px;
+}
 
-  .navbar-collapse > .botonera > li > a:hover,
-  .navbar-default .botonera > .active > a:hover{
-    font-size: 16px;
-  }
-
+.navbar-collapse > .botonera > li > a:hover,
+.navbar-default .botonera > .active > a:hover{
+  font-size: 16px;
+}
+  
   .navbar-header > a > img{
     padding: 10px 50px 2px 15px;
   }
@@ -170,25 +195,24 @@
   }
 
   .navbar-right > li{
-    margin: 15px 10px 0px 10px;
+    margin: 10px 10px 0px 10px; 
   }
 
-  .navbar-right > .color_morado{
-    margin: 0px 0px 0px 0px;
+ .navbar-right > .color_morado{
+    margin: 0px 0px 0px 0px; 
     padding: 20px 10px 16px 10px;
     border: 1px solid #504c6a;
   }
 
   .navbar-right > .color_morado:last-child{
-    margin: 0px 0px 0px 0px;
-    padding: 21px 15px 17px 15px;
-    border: 1px solid #504c6a;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .navbar-collapse > .navbar-right > li > a > h5{
     background-color: #504c6a;
     color: #ffffff;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
   }
 
   .navbar-collapse > .navbar-right > li > h2{
@@ -210,17 +234,34 @@
     padding-right: 8px;
   }
 
+  /*------------ Banner -----------*/
+
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 35em;
+  }
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 50px;
+    }
+
+
+
   /*-------- Sedes ---------*/
 
   .sedes .col-md-3{
     font-size: 20px;
-    letter-spacing: 7px;
+    letter-spacing: 7px; 
     padding: 10px 0px 10px 0px;
   }
 
   .sedes .col-md-9{
-    padding: 12px 0px 12px 0px;
-    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
   }
 
   .col-md-6 .ver_sede{
@@ -231,22 +272,32 @@
     padding: 17em 30px;
   }
 
+  #banner_sede img, #map{
+    height: 35em;
+  }
+
   /*-------- Contenido ---------*/
 
   .conten .col-md-4{
     font-size: 20px;
-    letter-spacing: 7px;
+    letter-spacing: 7px; 
     padding: 20px 0px 20px 0px;
   }
 
   .conten .col-md-8{
-    padding: 15px 0px 14px 0px;
+    padding: 6px 0px 6px 0px;
+    font-size: 20px;
   }
 
-
+ 
   /*-------- Nosotros ---------*/
 
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.2% 70px 5.2%;
+  }
 
+  
   /*-------- Contacto ---------*/
 
   .contacto .col-md-6 > .row > span{
@@ -256,7 +307,7 @@
 
 @media (min-width: 1600px) and (max-width: 2000px){
 
-  /*-------- Botonera ---------*/
+   /*-------- Botonera ---------*/
 
   .navbar-collapse > .navbar-nav > li > a,
   .navbar-default .navbar-nav > .active > a{
@@ -267,7 +318,7 @@
   .navbar-default .botonera > .active > a:hover{
     font-size: 16px;
   }
-
+ 
   .navbar-header > a > img{
     padding: 10px 40px 2px 15px;
   }
@@ -287,7 +338,7 @@
   .navbar-collapse > .navbar-right > li > a > h5{
     background-color: #504c6a;
     color: #ffffff;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
   }
 
   .navbar-collapse > .navbar-right > li > h2{
@@ -298,19 +349,18 @@
   }
 
   .navbar-right > li{
-    margin: 11px 10px 0px 10px;
+    margin: 11px 10px 0px 10px; 
   }
 
   .navbar-right > .color_morado{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
     padding: 20px 10px 15px 10px;
     border: 1px solid #504c6a;
   }
 
   .navbar-right > .color_morado:last-child{
-    margin: 0px 0px 0px 0px;
-    padding: 16px 20px 17px 20px;
-    border: 1px solid #504c6a;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .navbar-collapse > .botonera > li > a > .seleccionado,
@@ -325,6 +375,16 @@
     padding-right: 8px;
   }
 
+  /*------------ Banner -----------*/
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 50px;
+    }
+
+
+
   /*-------- Sedes ---------*/
 
   .sedes .col-md-3{
@@ -334,8 +394,8 @@
   }
 
   .sedes .col-md-9{
-    padding: 12px 0px 12px 0px;
-    font-size: 17px;
+    padding: 12px 0px 11px 0px;
+    font-size: 18px;
   }
 
   .col-md-4 .ver_sede{
@@ -345,23 +405,28 @@
   .col-md-6 .ver_sede{
     padding: 10em 30px;
   }
+  
+   /*-------- Contenido ---------*/
 
-  /*-------- Contenido ---------*/
-
-  .conten .col-md-4{
+   .conten .col-md-4{
     font-size: 20px;
     letter-spacing: 7px;
     padding: 20px 0px 19px 0px;
   }
 
   .conten .col-md-8{
-    padding: 14px 10px 13px 10px;
+    padding: 9px 10px 8px 10px;
+    font-size: 18px;
   }
 
 
-
+ 
   /*-------- Nosotros ---------*/
 
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.2% 70px 5.2%;
+  }
 
   /*-------- Contacto ---------*/
 
@@ -383,13 +448,13 @@
   .navbar-default .botonera > .active > a:hover{
     font-size: 14px;
   }
-
+  
   .navbar-header > a > img{
     padding: 10px 20px 2px 15px;
   }
 
   .navbar-collapse > .navbar-nav > li > a{
-    margin: 20px 10px 0px 10px;
+    margin: 20px 8px 0px 8px;
   }
 
   .navbar-collapse > .navbar-right > li > a{
@@ -397,25 +462,24 @@
   }
 
   .navbar-right > li{
-    margin: 13px 7px 0px 7px;
+    margin: 12px 5px 0px 5px; 
   }
 
   .navbar-right > .color_morado{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
     padding: 20px 10px 15px 10px;
     border: 1px solid #504c6a;
   }
 
   .navbar-right > .color_morado:last-child{
-    margin: 0px 0px 0px 0px;
-    padding: 17px 10px 16px 10px;
-    border: 1px solid #504c6a;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .navbar-collapse > .navbar-right > li > a > h5{
     background-color: #504c6a;
     color: #ffffff;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
   }
 
   .navbar-collapse > .navbar-right > li > h2{
@@ -437,6 +501,7 @@
     padding-right: 4px;
   }
 
+
   /*-------- Sedes ---------*/
 
   .sedes .col-md-3{
@@ -445,14 +510,31 @@
     padding: 10px 0px 10px 0px;
   }
 
-  .sedes .col-md-9{
-    padding: 11px 0px 11px 0px;
+  /*---------- FAQ -----------*/
+
+  .faq .col-xs-5 {
+    border-right: 1px solid #f58220;
+    width: 50%;
+  }
+
+  .pregunta{
+    width: 50%;
+  }
+
+  .respuesta{
+    width: 50%;
   }
 
 
+  
   /*-------- Nosotros ---------*/
 
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.2% 70px 5.2%;
+  }
 
+ 
   /*-------- Contacto ---------*/
 
   .contacto .col-md-6 > .row > span{
@@ -461,7 +543,7 @@
 }
 
 
-@media (min-width: 990px) and (max-width: 1200px){
+@media (min-width: 992px) and (max-width: 1200px){
 
   /*-------- Botonera ---------*/
 
@@ -476,37 +558,36 @@
   }
 
   .navbar-header > a > img{
-    padding: 10px 10px 2px 15px;
+    padding: 10px 5px 2px 5px;
   }
 
   .navbar-collapse > .navbar-nav > li > a{
     margin: 20px 7px 0px 7px;
-  }
+  }  
 
   .navbar-collapse > .navbar-right > li > a{
     margin: 0px 0px 0px 0px;
   }
 
   .navbar-right > li{
-    margin: 19px 5px 0px 5px;
+    margin: 15px 5px 0px 5px; 
   }
 
   .navbar-right > .color_morado{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
     padding: 20px 10px 16px 10px;
     border: 1px solid #504c6a;
   }
 
   .navbar-right > .color_morado:last-child{
-    margin: 0px 0px 0px 0px;
-    padding: 20px 10px 13px 5px;
-    border: 1px solid #504c6a;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .navbar-collapse > .navbar-right > li > a > h5{
     background-color: #504c6a;
     color: #ffffff;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px; 
   }
 
   .navbar-collapse > .navbar-right > li > h2{
@@ -528,15 +609,21 @@
     padding-right: 0px;
   }
 
-  /*------------ Banner -----------*/
+ /*------------ Banner -----------*/
 
-  #FirstCarousel{
-    width: 75%;
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 16em;
   }
 
-  #LeftCarousel{
-    width: 25%;
-  }
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 40px;
+    }
+
 
   /*-------- Sedes ---------*/
 
@@ -548,7 +635,11 @@
 
   .sedes .col-md-9{
     font-size: 11px;
-    padding: 14px 0px 15px 0px;
+    padding: 15px 0px 14px 0px;
+  }
+
+  #banner_sede img, #map{
+    height: 22em;
   }
 
   /*-------- Contenido ---------*/
@@ -561,9 +652,9 @@
 
   .conten .col-md-8{
     font-size: 11px;
-    padding: 14px 10px 14px 10px;
+    padding: 15px 10px 15px 10px;
   }
-
+  
   /*-------- Sedes ---------*/
 
   .col-md-6 .ver_sede{
@@ -574,6 +665,13 @@
     padding: 5em 30px;
   }
 
+  /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.5% 70px 5.5%;
+  }
+
 
   /*-------- Contacto ---------*/
 
@@ -582,7 +680,15 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 990px){
+@media (min-width: 768px) and (max-width: 992px){
+
+  /*------------ Banner -----------*/
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 40px;
+    }
 
 
   /*-------- Formulario ---------*/
@@ -601,7 +707,31 @@
     padding: 20em 30px;
   }
 
+  #map{
+    height: 25em;    
+  }
 
+  /*-------- Sedes (Especialistas) ---------*/
+
+  .ver_medico > .row > .col-xs-11{
+    padding-left: 20px;
+  }
+  .ver_medico img{
+    float: left;
+  }
+
+  /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 10% 70px 10%;
+  }
+
+  .nosotros .col-xs-11 > hr{
+    width: 82.5%;
+    margin-bottom: -15px;
+  }
+ 
   /*-------- Contacto ---------*/
 
   .contacto .col-md-6 > .row > span{
@@ -613,6 +743,15 @@
 @media (min-width: 450px) and (max-width: 768px){
 
 
+   /*------------ Banner -----------*/
+
+  .sombra{
+    margin-top: 51px;
+    background: linear-gradient(#e3e3e3, #ffffff); 
+    padding-top: 30px;
+  }
+ 
+
   /*-------- Sedes ---------*/
 
   .col-md-6 .ver_sede{
@@ -623,11 +762,32 @@
     padding: 15em 30px;
   }
 
+  #map{
+    height: 20em;    
+  }
+
   /*-------- FAQ ---------*/
 
   .pregunta > ul > li > a,
   .pregunta > ul > li > ul > li > a{
     margin-left: 30px;
+  }
+
+  /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 10.2% 70px 10.2%;
+  }
+
+  .nosotros .col-xs-11 > hr{
+    width: 81.3%;
+    margin-bottom: -15px;
+  }
+
+  .nosotros .col-md-6 > .row > .col-xs-10 > span{
+    padding-right: 20px;
+    float: left;
   }
 
 
@@ -648,9 +808,17 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 450px) { 
 
 
+  /*------------ Banner -----------*/
+
+  .sombra{
+    margin-top: 51px;
+    background: linear-gradient(#e3e3e3, #ffffff); 
+    padding-top: 30px;
+  }
+ 
   /*-------- Sedes ---------*/
 
   .col-md-6 .ver_sede{
@@ -663,6 +831,10 @@
 
   .ver_sede h3{
     font-size: 20px;
+  }
+
+  #map{
+    height: 15em;    
   }
 
   /*-------- FAQ ---------*/
@@ -678,10 +850,14 @@
 
   /*-------- Nosotros ---------*/
 
-  .publicidad .col-md-6{
-    display: none;
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.2% 70px 5.2%;
   }
 
+  .nosotros .col-xs-11{
+    display: none;
+  }
 
   /*-------- Contacto ---------*/
 
@@ -692,15 +868,12 @@
   /*-------- Formulariolario ---------*/
 
   .formulario .titulo{
-    font-size: 14px;
+  font-size: 14px;
+  display: inherit;
   }
 
   .formulario .col-xs-12{
     margin-bottom: 50px;
-  }
-
-  .formulario .col-xs-12:first-child{
-    margin-top: 50px;
   }
 
   .formulario form > .row > .col-xs-6 > button{
@@ -714,6 +887,50 @@
 
 @media (max-width: 768px) {
 
+  /*-------- Sedes (Especialistas) ---------*/
+
+  .sedes > .col-xs-10{
+    margin-top: 25px;
+  }
+  .ver_medico > .row > .col-xs-11{
+    padding: 0px 0px 0px 0px; 
+  }
+
+  .ver_medico ul{
+    padding-left: 25px;
+  }
+
+  .ver_medico ul > span:first-child{
+    font-size: 17px;
+  }
+
+  .ver_medico p{
+    font-size: 14px;
+  }
+
+  .ver_medico .fa-circle{
+    display: none;
+  }
+
+  .especialidades a > .fa-chevron-right{
+    display: none;
+  }
+
+  .especialidades a{
+    font-size: 14px;
+  }
+
+  
+  /*-------- contacto ---------*/
+
+  .contacto .col-md-3,
+  .contacto .col-md-6{
+    margin-top: 50px;
+  }
+
+  
+
+
 }
 
 @media (min-width: 1200px) {
@@ -721,18 +938,20 @@
   /*-------- Botonera ---------*/
 
   .navbar-right{
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px; 
   }
 
   /*------------ Banner -----------*/
 
-  #FirstCarousel{
+ /*
+   #FirstCarousel{
     width: 83.33333333%;
   }
 
   #LeftCarousel{
     width: 16.66666667%;
   }
+ */
 
 }
 
@@ -758,10 +977,11 @@
 
   .navbar-fixed-top > .container-fluid{
     padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid #e3e3e3;
   }
 
   .navbar{
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
   }
 
   .navbar-default{
@@ -769,8 +989,8 @@
   }
 
   .navbar-default hr{
-    margin-top: 0px;
-    height: 1px;
+   margin-top: 0px;
+   height: 1px;
   }
 
   nav .col-xs-4 > hr{
@@ -786,38 +1006,65 @@
   }
 
   .navbar-collapse > .navbar-right > li > a > h5{
-    padding: 3px 0px 0px 15px;
+    padding: 3px 0px 0px 5px;
   }
-
-  /*------------ Banner -----------*/
-
-  .sombra{
-    margin-top: 53px;
-    background: linear-gradient(#e3e3e3, #ffffff);
-    padding-top: 50px;
-  }
-
-  /*----------- Sedes ----------------*/
+   
+ /*----------- Sedes ----------------*/
 
   .sedes{
-    margin: 50px 0px 50px 0px;
+    margin-bottom: 50px;
   }
 
   .sedes .col-md-6{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .sedes .col-md-4{
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  #mosaico_sede{
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+
+  .ver_sede{
+    margin: 0px 7px 0px 7px;
   }
 
   .ubicacion .col-md-7 > img{
     width: 100%;
-    border: 1px solid #504c6a;
+    border: 1px solid #504c6a; 
+  }
+
+  /*-------- Sedes (Especialistas) ---------*/
+
+  .ver_medico > .row > .col-xs-11{
+    margin-left: 55px;
   }
 
 
   /*------ Publicidad ---------*/
 
-  .publicidad > .col-md-6:last-child{
-    border-left: 2px solid #ffffff;
+    .publicidad > .col-md-6:last-child{
+      border-left: 2px solid #ffffff;
+    }
+
+  /*------ FAQ ---------*/
+
+  .pregunta, .respuesta{
+    font-size: 18px;
   }
+
+   /*------ Noticias ---------*/
+
+  .noticias .col-sm-6{
+    margin: 50px 0px 50px 0px;
+  }
+
 
   /*------ Formulario ---------*/
 
@@ -830,11 +1077,75 @@
   }
 
   .formulario .titulo{
-    font-size: 20px;
+  font-size: 20px;
+  }
+
+  .formulario .form-horizontal > .row:last-child{
+    float: right;
+    margin-right: 25px;
+  }
+
+  .formulario .col-sm-6{
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .formulario .row > .col-sm-6:first-child{
+    padding-left: 0px;
+  }
+
+  .formulario .row > .col-sm-6:last-child{
+    padding-right: 0px;
+  }
+
+  .formulario .col-sm-6:first-child > a{
+    float: right;
+  }
+
+  .formulario .col-sm-6:last-child > a{
+    float: left;
+    border-color: 
+  }
+
+  /*-------- Nosotros ---------*/
+
+  .nosotros .col-xs-11 > hr{
+    width: 90.5%;
+    margin-bottom: -15px;
+  }
+
+  /*-------- Instagram ---------*/
+
+  .instagram{
+    margin-bottom: 90px;
+  }
+
+  .columna-instagram{
+    width: 20.04%;
+    float: right;
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    border-left: 2px solid #504c6a;
+    border-top: 2px solid #504c6a;
+  }
+
+  .columna-instagram hr{
+    margin: 20px 0px 0px 15px;
+    width: 30%;
+  }
+
+  .columna-instagram span{
+    font-size: 18px;
+    padding-top: 8px;
+  }
+
+  .columna-instagram .fa-instagram{
+    padding-right: 15px;
+
   }
 
 
-  /*------ Contacto ---------*/
+ /*------ Contacto ---------*/
 
   .contacto .col-md-6 > .row > span{
     float: left;
@@ -844,15 +1155,15 @@
     padding-right: 0px;
     padding-left: 0px;
     border-right: 1px solid #504c6a;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
   }
-
+  
   .contacto > .col-xs-12 > .row > .col-md-6:last-child{
     padding-right: 30px;
     padding-left: 70px;
   }
 
-  /*------ Footer ---------*/
+/*------ Footer ---------*/ 
 
   footer .fa-arrow-up{
     padding-right: 5%;
@@ -876,9 +1187,9 @@
     font-size: 20px;
   }
 
-  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a, 
   .navbar-default .navbar-nav > .active > a:active,
-  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:hover, 
   .navbar-default .navbar-nav > .active > a:focus{
     font-size: 20px;
     color: #707070;
@@ -900,39 +1211,96 @@
     padding-left: 20px;
   }
 
-  /*------------ Banner -----------*/
-
-  #myCarousel{
-    padding-top: 55px;
-    margin: 0px -15px 0px -15px;
+  .navbar-nav > li > a{
+    padding: 5px 0px 5px 0px;
   }
 
   /*-------- Sedes ----------*/
 
-  .sedes{
-    margin: 0px -15px 50px -15px;
+    .sedes{
+      margin: 0px -15px 50px -15px; 
+    }
+
+    .sedes .col-md-3{
+      font-size: 20px;
+      letter-spacing: 7px;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .sedes .col-md-9{
+      padding: 15px 10px 15px 10px;
+      font-size: 16px;
+    }
+
+    .ver_sede{
+      margin: 0px 15px 0px 15px;
+    }
+
+    #map{
+      margin-left: 0px;
+    }
+
+  /*------ Noticias ---------*/
+
+  .noticias .col-sm-6{
+    margin: 30px 0px 30px 0px;
   }
 
-  .sedes .col-md-3{
-    font-size: 20px;
-    letter-spacing: 7px;
-    padding: 10px 0px 10px 0px;
-  }
-
-  .sedes .col-md-9{
-    padding: 15px 10px 15px 10px;
-  }
 
   /*-------- Contenido ----------*/
 
-  .conten .col-md-4{
-    font-size: 20px;
-    letter-spacing: 7px;
-    padding: 10px 0px 10px 0px;
+    .conten .col-md-4{
+      font-size: 20px;
+      letter-spacing: 7px;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .conten .col-md-8{
+      padding: 15px 10px 15px 10px;
+      font-size: 16px;
+    }
+
+  /*-------- Formulario ---------*/
+
+  .formulario .col-sm-6{
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
-  .conten .col-md-8{
-    padding: 15px 0px 15px 0px;
+  .formulario .col-xs-12:first-child{
+    margin-top: 50px;
+  }
+
+  .formulario .form-horizontal > .row > .col-xs-6 > button{
+    float: right;
+  }
+
+  /*-------- Instagram ---------*/
+
+  .instagram{
+     margin-bottom: 50px;
+  }
+
+  .columna-instagram{
+    float: right;
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    border-top: 2px solid #504c6a;
+  }
+
+  .columna-instagram hr{
+    margin: 20px 0px 0px 15px;
+    width: 30%;
+  }
+
+  .columna-instagram span{
+    font-size: 20px;
+    padding-top: 5px;
+  }
+
+  .columna-instagram .fa-instagram{
+    padding-right: 15px;
+
   }
 
 
@@ -942,7 +1310,7 @@
     position: initial;
   }
 
-  /*------ Footer ---------*/
+  /*------ Footer ---------*/ 
 
   footer > .container-fluid{
     padding: 20px 15px 30px 15px;
@@ -959,6 +1327,39 @@
     margin-left: 30px;
   }
 
+  /*-------- Sedes (Especialistas) ---------*/
+
+  .sedes > .col-xs-10{
+    margin-top: 50px;
+  }
+
+  .ver_medico img{
+    float: left;
+  }
+
+  .ver_medico .col-xs-11 > ul > p{
+    padding-left: 55px;
+  }
+
+  .especialidades a > .fa-chevron-right{
+    color: #ffffff;
+  }
+
+  .especialidades a:hover > .fa-chevron-right,
+  .especialidades .btn-push > .fa-chevron-right{
+    color: #504c6a;
+  }
+
+  .ver_medico ul > span:first-child{
+    font-size: 20px;
+    margin-left: -8px;
+  }
+
+  .especialidades a{
+    font-size: 20px;
+  }
+
+
   /*-------- Formulario ---------*/
 
   .formulario form > .row > .col-xs-6 > button{
@@ -966,9 +1367,40 @@
     margin-bottom: 40px;
   }
 
+  /*-------- Nosotros ---------*/
+
+  .nosotros .col-md-6 > .row > .col-xs-10 > span{
+    padding-right: 20px;
+    float: left;
+  }
+
+  /*-------- contacto ---------*/
+
+  .contacto .col-md-3,
+  .contacto .col-md-6{
+    margin-top: 50px;
+  }
+
+
 }
 
 @media (min-width: 1200px) and (max-width: 1400px){
+
+  /*------------ Banner -----------*/
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 40px;
+    }
+ 
+
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 20em;
+  }
 
   /*-------- Contenido ---------*/
 
@@ -979,7 +1411,8 @@
   }
 
   .conten .col-md-8{
-    padding: 11px 10px 11px 10px;
+    padding: 11px 10px 10px 10px;
+    font-size: 14px;
   }
 
 
@@ -993,10 +1426,46 @@
     padding: 8em 30px;
   }
 
+  .sedes .col-md-9{
+    padding: 11px 0px 11px 0px;
+    font-size: 14px;
+  }
 
+  .sedes .col-lg-2{
+    width: 20%;
+  }
+
+  #banner_sede img, #map{
+    height: 25em;
+  }
+
+  /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.5% 70px 5.5%;
+  }
 
 }
 @media (min-width: 1400px) and (max-width: 1600px){
+
+  /*------------ Banner -----------*/
+
+ .sombra{
+      margin-top: 51px;
+      background: linear-gradient(#e3e3e3, #ffffff); 
+      padding-top: 50px;
+    }
+ 
+
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 25em;
+  }
+
+
 
   /*-------- Contenido ---------*/
 
@@ -1007,10 +1476,16 @@
   }
 
   .conten .col-md-8{
-    padding: 12px 10px 12px 10px;
+    padding: 9px 10px 9px 10px;
+    font-size: 16px;
   }
 
   /*-------- Sedes ---------*/
+
+  .sedes .col-md-9{
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+  }
 
   .col-md-6 .ver_sede{
     padding: 6em 30px;
@@ -1020,11 +1495,54 @@
     padding: 10em 30px;
   }
 
+  #banner_sede img, #map{
+    height: 28em;
+  }
+
+  /*-------- Nosotros ---------*/
+
+  .nosotros .conten{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 5.3% 70px 5.3%;
+  }
+
 }
 
+@media (min-width: 1800px) and (max-width: 2000px){
 
-#carouselPrincipal > .carousel-inner > .item > img, #carousel > .carousel-inner > .item > img {
-  max-height: 450px;
+  /*------------ Banner -----------*/
+
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 30em;
+  }
+
+/*------------ Sedes -----------*/
+
+  #banner_sede img, #map{
+    height: 33em;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1800px){
+
+  /*------------ Banner -----------*/
+
+ #carousel .carousel-inner > .item > img, 
+  #carouselPrincipal .carousel-inner > .item > img,
+  #carousel .carousel-inner > .item > a > img, 
+  #carouselPrincipal .carousel-inner > .item > a > img {
+    height: 25em;
+  }
+
+/*------------ Sedes -----------*/
+
+  #banner_sede img, #map{
+    height: 30em;
+  }
+
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -1032,12 +1550,12 @@
 /*-------- Estilos Generales ---------*/
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Arial';
+	font-family: 'Arial';
 }
 
 .inversa p, .inversa h1, .inversa h2, .inversa h3, .inversa h4, .inversa h5{
-  color:#FFF;
-  font-family: 'Arial';
+	color:#FFF;
+	font-family: 'Arial';
 }
 
 .maximo{
@@ -1045,14 +1563,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .no_margin1{
-  margin-left:0px;
-  margin-right:0px;
+	margin-left:0px;
+	margin-right:0px;
 }
 
 
 .no_padding1{
-  padding-left:0px;
-  padding-right:0px;
+	padding-left:0px;
+	padding-right:0px;
 }
 
 .no_margin2{
@@ -1069,16 +1587,16 @@ h1, h2, h3, h4, h5, h6{
 
 
 .container-fluid{
-  /*padding-left:0px;
-  padding-right:0px;*/
+	/*padding-left:0px;
+	padding-right:0px;*/
 }
 
 a{
-  font-family: 'Arial';
+	font-family: 'Arial';
 }
 
 a:hover{
-  color:#ef3d2f;
+	color:#ef3d2f;
   text-decoration: inherit;
 }
 
@@ -1087,7 +1605,7 @@ body {
   padding: 0px 0px 0px 0px;
   color: #707070;
   font-family: 'Arial';
-  background-color:
+  background-color: 
 }
 
 p{
@@ -1100,7 +1618,7 @@ hr{
 
 
 .carousel-control.left, .carousel-control.right {
-  background-image:none;
+	background-image:none;
 }
 
 .carousel-fade .carousel-inner .item {
@@ -1134,7 +1652,7 @@ hr{
 }
 .carousel-inner > .item > img {
   width:100%;
-  height: auto;
+ /* max-height:600px;*/
 }
 
 .container>.navbar-collapse{ /*Estilos Barra Responsive(Colapso a menores resoluciones)*/
@@ -1142,24 +1660,27 @@ hr{
   border-top: 2px #ffc200 solid !important;
 }
 .container-header{/*Color y Ubicacion de Botonera*/
+
   background-color: #333333;
   margin-right:auto;
   margin-left:auto;
+
+
 }
 
 #Carousel2 > .carousel-control.left, #Carousel2 > .carousel-control.right, #Carousel3 > .carousel-control.left, #Carousel3 >.carousel-control.right {
-  background-image:none;
-  opacity:0;
+	background-image:none;
+	opacity:0;
 }
 
 #Carousel2 > .carousel-indicators, #Carousel3 > .carousel-indicators{
-  opacity:0;
+	opacity:0;
 }
 
 
 .form-horizontal .form-group{
-  margin-left:0px;
-  margin-right:0px;
+	margin-left:0px;
+	margin-right:0px;
 }
 
 .fuente_gris{
@@ -1182,10 +1703,10 @@ hr{
   background-color: #efefef;
 }
 
-.panel, .panel-footer,
+.panel, .panel-footer, 
 .panel-default > .panel-heading{
   background-color: transparent;
-  border: transparent;
+  border: transparent; 
   padding-bottom: 0px;
 }
 
@@ -1202,23 +1723,23 @@ hr{
 
 .navbar-collapse > .navbar-nav > li > a,
 .navbar-default .navbar-nav > .active > a{
-  background-color: #ffffff;
-  color: #707070;
+    background-color: #ffffff;
+    color: #707070;
 }
 
 .navbar-collapse > .botonera > li > a:hover,
 .navbar-default .botonera > .active > a:hover,
 .navbar-collapse > .botonera > li > a:focus,
 .navbar-default .botonera > .active > a:focus{
-  background-color: #ffffff;
-  color: #707070;
+    background-color: #ffffff;
+    color: #707070;
 }
 
 .navbar-collapse > .navbar-nav > li > a > .seleccionado,
 .navbar-default .navbar-nav > .active > a > .seleccionado{
-  display: inline-block;
-  padding-bottom: 5px;
-  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    display: inline-block;
+    padding-bottom: 5px;
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .navbar-collapse > .botonera > li > a:hover > .seleccionado,
@@ -1227,14 +1748,37 @@ hr{
 .navbar-default .botonera > .active > a:focus > .seleccionado{
   display: inline-block;
   padding-bottom: 5px;
-  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+   -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
+
+.navbar-right > .color_morado:last-child {
+    margin: 0px 0px 0px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #504c6a;
+}
+
+/*  Banner
+-----------------*/
+
+.carousel-indicators li{
+  border: 1px solid #f58220; 
+}
+
+.carousel-indicators .active{
+  background-color: #f58220;
+}
+
+.container-fluid > .row > .sombra + .col-xs-12{
+  padding-right: 4%;
+  padding-left: 4%;
 }
 
 /*  Contenido
 -----------------*/
 
 .conten{
-  margin: 0px 20px 50px 20px;
+  margin: 0px 20px 50px 20px; 
 }
 
 .conten .col-md-4{
@@ -1252,10 +1796,6 @@ hr{
 /* Sedes
 --------------------------------------*/
 
-.sedes > .col-xs-10{
-  margin-top: 50px;
-}
-
 .sedes > .col-xs-12 > .btn-info{
   margin-top: 50px;
 }
@@ -1272,10 +1812,6 @@ hr{
   background-color: #504c6a;
 }
 
-.img-sede img{
-  width: 100%;
-}
-
 .ver_sede {
   position:absolute;
   left:0;
@@ -1285,19 +1821,18 @@ hr{
   opacity:0;
   visibility:hidden;
   font-size:12px;
-  margin: 0px 15px 0px 15px;
   color:#fff;
   background:rgba(35,35,35,0.8);
 }
 
-.sedes a:hover >.ver_sede {
-  visibility:visible;
-  opacity:1;
+.sedes a:hover >.ver_sede { 
+  visibility:visible; 
+  opacity:1; 
   top:0;
 }
 
 .efecto-hover{
-  transition: all 1s ease;
+   transition: all 1s ease;
 }
 
 .ubicacion .fa-circle{
@@ -1309,7 +1844,7 @@ hr{
   padding-right: 5px;
 }
 
-.sedes .titulo > span{
+.sedes .titulo > span{     
   font-size: 16px;
   font-family: "Arial";
   border: 1px solid #504c6a;
@@ -1317,48 +1852,41 @@ hr{
   background-color: #ffffff;
 }
 
-.sedes hr{
+.sedes hr{                  
   margin-bottom: -11px;
+}
+
+#map, #banner_sede img{
+  border: 1px solid #504c6a;
 }
 
 /*----- Sede (Especialistas) ------*/
 
-.especialistas{
+.especialidades{
   border-right: 1px solid #c6c6c6;
 }
 
-.especialistas a{
-  color: #504c6a;
-  font-size: 20px;
-}
-
-.especialistas a > .fa-chevron-right{
-  color: #ffffff;
-}
-
-.especialistas a:hover > .fa-chevron-right,
-.especialistas a:focus > .fa-chevron-right{
+.especialidades a{
   color: #504c6a;
 }
 
-.especialistas .navbar-inverse,
-.especialistas .navbar-inverse .navbar-collapse{
+.especialidades .navbar-inverse,
+.especialidades .navbar-inverse .navbar-collapse{
   border: transparent;
 }
 
-.especialistas .fa-circle{
+.especialidades .fa-circle{
   font-size: 7px;
   vertical-align: 50%;
 }
 
-.especialistas .fa-chevron-right{
+.especialidades .fa-chevron-right{
   padding-left: 20px;
 }
 
 .ver_medico > .row > .col-xs-11{
   padding-bottom: 20px;
   border-bottom: 1px solid #c6c6c6;
-  margin-left: 50px;
   margin-bottom: 20px;
 }
 
@@ -1366,34 +1894,27 @@ hr{
   text-align: left;
 }
 
-.ver_medico ul > span:first-child{
-  font-size: 20px;
-  color: #504c6a;
-}
-
-.ver_medico ul > span:last-child{
-  display: flex;
-}
-
 .ver_medico .fa-circle{
   font-size: 7px;
   color: #504c6a;
-  display: flex;
-  padding-top: 8px;
-  padding-left: 0px;
-}
+  padding-top: 35px;
+  float: left;
+} 
 
 .ver_medico img{
-  border: 1px solid #504c6a;
+  border: 1px solid #504c6a; 
+  margin-right: 20px;
 }
 
 /*------- Sede (Contenido) --------*/
 
-.sedes .panel-default{
+.sedes .panel-default,
+.nosotros .panel-default{                   /* Involucra la clase Nosotros */
   margin-top: 50px;
 }
 
-.sedes .panel-default > .panel-heading{
+.sedes .panel-default > .panel-heading,
+.nosotros .panel-default > .panel-heading{  /* Involucra la clase Nosotros */
   background-color: #504c6a;
   font-size: 20px;
   text-align: left;
@@ -1402,15 +1923,18 @@ hr{
   color: #ffffff;
 }
 
-.sedes .panel-default > .panel-heading > img{
+.sedes .panel-default > .panel-heading > img,
+.nosotros .panel-default > .panel-heading > img{  /* Involucra la clase Nosotros */
   margin-bottom: 9px;
 }
 
-.sedes .panel-default > .panel-heading > span{
-  padding: 8px 0px 15px 20px;
+.sedes .panel-default > .panel-heading > span,
+.nosotros .panel-default > .panel-heading > span{ /* Involucra la clase Nosotros */
+  padding: 8px 0px 15px 20px; 
 }
 
-.sedes .panel-default > .panel-body{
+.sedes .panel-default > .panel-body,
+.nosotros .panel-default > .panel-body{         /* Involucra la clase Nosotros */
   text-align: left;
   padding: 30px 0px 0px 0px;
 }
@@ -1423,8 +1947,7 @@ hr{
 }
 
 .carousel-inner > .item > a > img {
-  line-height: 1;
-  width: 100%;
+    line-height: 1;
 }
 
 .publicidad > .col-md-6{
@@ -1434,82 +1957,10 @@ hr{
   font-size: 17px;
 }
 
-/*  Nosotros
---------------------------------------*/
-
-
-
-/* Formulario (Presupuestos y Citas en Linea)
------------------------------------------*/
-
-.formulario .titulo{
-  letter-spacing: 10px;
-  font-family: "Arial";
-  border: 1px solid #f58220;
-  color: #f58220;
-  padding: 15px 15px 15px 15px;
-  background-color: #ffffff;
+.publicidad .col-md-6 > a{
+    color: #ffffff;
 }
 
-.formulario form > .row > .form-group{
-  display: flex;
-}
-
-.formulario input,
-.formulario select,
-.formulario option{
-  width: 100%;
-  border-top: transparent;
-  border-right: transparent;
-  border-bottom: 1px solid #f58220;
-  border-left: transparent;
-  color: #606060;
-  font-size: 17px;
-  border-radius: 0px;
-}
-
-.formulario input[type="text"]::-webkit-input-placeholder,
-.formulario input[type="number"]::-webkit-input-placeholder,
-.formulario input[type="email"]::-webkit-input-placeholder{
-  color: #606060;
-  font-size: 17px;
-}
-
-.formulario .fa-circle{
-  color: #606060;
-  margin:10px 10px 0px 0px;
-  font-size: 6px;
-  padding: 0px 0px 0px 0px;
-}
-
-.formulario .form-group > .color_naranja{
-  color: #f58220;
-}
-
-.formulario .form-group > span{
-  font-size: 17px;
-  color: #f58220;
-  padding-bottom: 15px;
-}
-
-.formulario .btn-info{
-  border: 1px solid #f58220;
-  color: #f58220;
-  background-color: #ffffff;
-  font-size: 15px;
-  padding:8px 12px 8px 12px;
-  float: right;
-}
-
-.formulario .btn-info:hover,
-.formulario .btn-info:focus{
-  border: 1px solid #f58220;
-  color: #ffffff;
-  background-color: #f58220;
-  font-size: 15px;
-  padding:8px 12px 8px 12px;
-  float: right;
-}
 
 /*  Preguntas Frecuentes
 --------------------------------------*/
@@ -1531,7 +1982,7 @@ hr{
 }
 
 .faq .col-xs-5{
-  border-right: 1px solid #f58220;
+  border-right: 1px solid #f58220; 
 }
 
 .faq .col-xs-7 > .row > .col-xs-12{
@@ -1570,13 +2021,13 @@ hr{
 }
 
 .pregunta  a:hover > .fa-arrow-right,
-.pregunta  a:focus > .fa-arrow-right{
+.pregunta .btn-push > .fa-arrow-right{
   color: #f58220;
   margin-left: 20px;
 }
 
 .pregunta{
-  padding: 30px 0px 30px 0px;
+  padding: 30px 0px 30px 0px; 
 }
 
 .pregunta > ul > li > a,
@@ -1613,7 +2064,8 @@ hr{
   margin-top: 90px;
 }
 
-.noticias .col-sm-6{
+
+.noticias > .col-xs-10{
   margin: 50px 0px 50px 0px;
 }
 
@@ -1661,7 +2113,8 @@ hr{
 }
 
 .noticias .btn-info,
-.sedes .btn-info{                /* Involucra a Sedes*/
+.sedes .btn-info,
+.contacto .btn-info{                /* Involucra a Sedes y contacto*/
   border: 1px solid #504c6a;
   color: #ffffff;
   background-color: #504c6a;
@@ -1669,16 +2122,50 @@ hr{
   padding:12px 12px 12px 12px;
 }
 
-.noticias .btn-info:hover,
+.noticias .btn-info:hover,          
 .noticias .btn-info:focus,
-.sedes .btn-info:hover,          /* Involucra a Sedes*/
-.sedes .btn-info:focus{
+.sedes .btn-info:hover,          /* Involucra a Sedes y contacto*/
+.sedes .btn-info:focus,
+.contacto .btn-info:hover,          
+.contacto .btn-info:focus{
   border: 1px solid #504c6a;
   color: #504c6a;
   background-color: #ffffff;
   font-size: 15px;
   padding:12px 12px 12px 12px;
 }
+
+.noticias hr{
+  height: 2px;
+  width: 40%;
+  margin: 20px 0px 50px 0px;
+}
+
+/*  Instagram
+--------------------------------------*/
+
+.instagram{
+  background-color: #504c6a;
+}
+
+
+/*  Nosotros
+--------------------------------------*/
+
+.nosotros{
+  margin: 70px -15px 0px -15px;
+}
+
+.nosotros .col-md-6 > .row > .col-xs-10 > span{
+  background-color: #ffffff;
+  letter-spacing: 6px;
+  font-size: 20px;
+}
+
+.nosotros .panel-default{
+  margin-bottom: 50px;
+}
+
 
 /* Contacto
 -----------------------------------------*/
@@ -1691,22 +2178,19 @@ hr{
   padding: 50px 0px 10px 0px;
 }
 
-.contacto .col-md-3,
-.contacto .col-md-6{
-  margin-top: 50px;
-}
-
 .contacto > .col-xs-12 > .row > .col-md-6:first-child{
   padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 0px; 
 }
 
-.contacto hr{
-  margin: 0px 0px -15px 0px;
+.contacto hr,   
+.nosotros hr{                      /* Involucra a Nosotros*/
+  margin-bottom: -15px;
 }
 
 .contacto .titulo > span,
-.noticias .titulo > span{         /* Involucra a Noticia*/
+.noticias .titulo > span,
+.nosotros .titulo > span{         /* Involucra a Noticia y Nosotros*/
   font-size: 20px;
   letter-spacing: 6px;
   font-family: "Arial";
@@ -1715,7 +2199,8 @@ hr{
   background-color: #ffffff;
 }
 
-.contacto input{
+.contacto input,
+.contacto select{
   width: 100%;
   border-top: transparent;
   border-right: transparent;
@@ -1736,8 +2221,8 @@ hr{
 
 .contacto input[type="text"]::-webkit-input-placeholder,
 .contacto input[type="email"]::-webkit-input-placeholder{
-  color: #504c6a;
-  font-size: 17px;
+    color: #504c6a;
+    font-size: 17px;
 }
 
 .contacto .panel-body > .col-xs-10{
@@ -1778,12 +2263,8 @@ span .fa{
 /*  GALERIA
 ----------------------------------------------------*/
 
-.efecto-hover {
-  transition: all 1s ease;
-}
-
 .efecto-hover:hover {
-  transform: scale(1.08);
+    transform: scale(1.08);
 
 }
 
@@ -1794,19 +2275,131 @@ footer a{
   font-family: 'MyriadPro';
 }
 
+footer a:hover > .row > .col-xs-10 > p{
+  text-decoration: underline;
+  color: #504c6a;
+}
+
 footer .fa-arrow-up{
   color: #f58220;
   font-size: 35px;
 }
 
 footer img{
-  margin-top: -4px;
+  margin-top: -6px;
 }
 
 footer hr{
   margin: 0px -15px 0px -15px;
 }
 
+/* Formulario (Presupuestos y Citas en Linea)
+-----------------------------------------*/
+
+.formulario .titulo{
+  letter-spacing: 10px;
+  font-family: "Arial";
+  border: 1px solid #f58220;
+  color: #f58220;
+  padding: 15px 15px 15px 15px;
+  background-color: #ffffff;
+}
+
+.formulario form > .row > .form-group{
+  display: flex;
+}
+
+.formulario input,
+.formulario select,
+.formulario option{
+  width: 100%;
+  border-top: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid #f58220;
+  border-left: transparent;
+  color: #606060;
+  font-size: 17px;
+  border-radius: 0px;
+}
+
+.formulario input[type="text"]::-webkit-input-placeholder,
+.formulario input[type="number"]::-webkit-input-placeholder,
+.formulario input[type="email"]::-webkit-input-placeholder,
+.formulario input[type="tel"]::-webkit-input-placeholder{
+    color: #606060;
+    font-size: 17px;
+}
+
+input[type="date"]::before{
+    content: attr(placeholder);
+}
+input[type="date"]:focus::before {
+    content: "" !important;
+}
+
+.formulario .fa-circle{
+  color: #606060;
+  margin:10px 10px 0px 0px;
+  font-size: 6px;
+  padding: 0px 0px 0px 0px;
+}
+
+.formulario .form-group > .color_naranja,
+.formulario #form_resp{
+  color: #f58220;
+}
+
+.formulario .form-group > span{
+  font-size: 17px;
+  color: #f58220;
+  padding-bottom: 15px;
+}
+
+ .formulario .btn-info{
+  border: 1px solid #f58220;
+  color: #f58220;
+  background-color: #ffffff;
+  font-size: 15px;
+  padding:8px 12px 8px 12px;
+  border-radius: 0px;
+}
+
+.formulario .btn-info:hover,
+.formulario .btn-info:focus,
+.formulario .btn-push{
+  border: 1px solid #f58220;
+  color: #ffffff;
+  background-color: #f58220;
+  font-size: 15px;
+  padding:8px 12px 8px 12px;
+  border-radius: 0px;
+}
+
+.formulario .alert{
+  background-color: #f8e9d6;
+  color: #f58220;
+  border-color: #ffdad0;
+}
+
+.formulario #form_resp{
+  margin: 0px 0px 0px 0px;
+}
+
+.formulario .form-group > .input-group-addon{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 50px;
+  cursor: pointer;
+  background-color: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 1px solid #f58220
+}
+
+#visible3{
+  margin-top: 25px;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -1815,8 +2408,8 @@ footer hr{
 
 
 .navbar-default{
-  background-color: #fff;	/*Color general de la barra de navegacion*/
-  border:none;
+	background-color: #fff;	/*Color general de la barra de navegacion*/
+	border:none;
 }
 
 .navbar-right {
@@ -1825,19 +2418,19 @@ footer hr{
 }
 
 .opacidad{
-  opacity: 1;
+	opacity: 1;
 }
 
 .opacidad:hover{
-  opacity: 0.2;
+	opacity: 0.2;
 }
 
 .opacidad_media{
-  opacity: 0.4;
+	opacity: 0.4;
 }
 
 .opacidad_media:hover{
-  opacity: 1;
+	opacity: 1;
 }
 
 .dropdown-menu > li > a:hover,
@@ -1858,16 +2451,16 @@ footer hr{
 /* Personalizar paginacion*/
 
 nav.pagina{
-  text-align:center;
+	text-align:center;
 }
 
 .pagination > .active > a{
-  background-color:#9C0;
+	background-color:#9C0;
 }
 
 .pagination > .active > a:hover{
-  background-color:#9C0;
-  border-color:#83af00
+	background-color:#9C0;
+	border-color:#83af00
 }
 
 
@@ -1877,35 +2470,35 @@ nav.pagina{
 
 /*--------------------------------------*/
 #itemsingle{
-  width: auto;
-  padding-bottom: 20px;
+	width: auto;
+	padding-bottom: 20px;
 }
 
 #itemsingle img{
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #itemsingle .item{
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 #itemsingle .active ,
 #itemsingle .active {
-  opacity: 1;
-  filter: alpha(opacity=1);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+	opacity: 1;
+	filter: alpha(opacity=1);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 #itemsingle .carousel-indicators {
@@ -1921,13 +2514,13 @@ nav.pagina{
 
 #itemsingle .carousel-indicators:after,
 #itemsingle .carousel-indicators:before{
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 #itemsingle .carousel-indicators li:hover{
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #itemsingle .carousel-indicators li {
@@ -1954,7 +2547,7 @@ nav.pagina{
 
 #itemsingle .carousel-indicators li:last-child,
 #itemsingle .carousel-indicators li:nth-child(3n) {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 #itemsingle .carousel-indicators .active {
@@ -1974,69 +2567,69 @@ nav.pagina{
 /*   ===============    Drop down menu multiple css   ==============*/
 
 .dropdown-submenu {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  -webkit-border-radius: 0 6px 6px 6px;
-  -moz-border-radius: 0 6px 6px;
-  border-radius: 0 6px 6px 6px;
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
 }
 
 .dropdown-submenu:hover>.dropdown-menu {
-  display: block;
+    display: block;
 }
 
 .dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #ccc;
-  margin-top: 5px;
-  margin-right: -10px;
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
 }
 
 .dropdown-submenu:hover>a:after {
-  border-left-color: #fff;
+    border-left-color: #fff;
 }
 
 .dropdown-submenu.pull-left {
-  float: none;
+    float: none;
 }
 
 .dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  -webkit-border-radius: 6px 0 6px 6px;
-  -moz-border-radius: 6px 0 6px 6px;
-  border-radius: 6px 0 6px 6px;
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
 }
 
 /*--------------------------------------------------------------------*/
 
 .navbar-dartronics{
-  float:left;
-  background-color:#000;
-  border:none !important;
+	float:left;
+	background-color:#000;
+	border:none !important;
   border-radius: 0px;
-  font-size:12px;
-  padding: 16px 14px 17px 14px;
+	font-size:12px;
+	padding: 16px 14px 17px 14px;
 }
 
 .navbar-dartronics:hover, .navbar-dartronics:focus{
-  background-color:#000;
+	background-color:#000;
 }
 
 .menu-dartronics{
-  top: 50px !important;
+	top: 50px !important;
   left: 60px !important;
 }

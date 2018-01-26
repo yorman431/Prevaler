@@ -52,23 +52,30 @@
                   </ul>
                 </li>
               {else}
-                <li {if $enlaces_A[i].id_cat eq $activo}class="active"{/if}><a id="borde" class="{if $enlaces_A[i].id_cat neq '1' && $enlaces_A[i].id_cat neq '5'}transicion{/if}" title="{$enlaces_A[i].etiqueta_cat}" href="{if $enlaces_A[i].id_cat eq '1'}index.php {else}{if $enlaces_A[i].id_cat eq '2'} #productos {else} {if $enlaces_A[i].id_cat eq '3'} #sedes {else}
-                {if $enlaces_A[i].id_cat eq '4'} #faq {else}{if $enlaces_A[i].id_cat eq '5'}presupuesto.php {else} #contacto {/if}{/if}{/if}{/if}{/if}"">
+                <li {if $enlaces_A[i].id_cat eq $activo}class="active"{/if}><a id="borde" class="{if $enlaces_A[i].id_cat neq '2' && $enlaces_A[i].id_cat neq '5' && $activo eq '1' || $enlaces_A[i].id_cat eq '6'}transicion{/if}" title="{$enlaces_A[i].etiqueta_cat}" href="{if $enlaces_A[i].id_cat eq '1'}{if $activo eq '1'} #inicio {else} index.php{/if} {else}{if $enlaces_A[i].id_cat eq '2'} nosotros.php {else} {if $enlaces_A[i].id_cat eq '3'}{if $activo eq '1'} #sedes {else} index.php#sedes{/if} {else}
+                {if $enlaces_A[i].id_cat eq '4'} {if $activo eq '1'} #faq {else} index.php#faq {/if} {else}{if $enlaces_A[i].id_cat eq '5'}presupuesto.php {else} #contacto {/if}{/if}{/if}{/if}{/if}"">
                   <img class="seleccionado img-responsive" src="/imagenes/seleccion.png">
                   {$enlaces_A[i].nombre_cat}</a></li>
               {/if}
             {/section}
         </ul>
+
         <ul class="nav navbar-nav">
-            <li class="hidden-md hidden-lg"><a title="Follow us on Instagram" href="" target="_blank">
+            <li class="hidden-md hidden-lg"><a title="Follow us on Instagram" href="https://www.instagram.com/prevaler_ve/" target="_blank">
               <i class="fa fa-instagram fuente_morada" aria-hidden="true"></i></a></li>
-            <li class="hidden-md hidden-lg"><a title="Follow us on Twitter" href="" target="_blank">
-              <i class="fa fa-twitter fuente_morada"></i></a></li>
+            <li class="hidden-md hidden-lg"><a title="Follow us on Twitter" href="https://twitter.com/Prevaler_VE" target="_blank">
+              <i class="fa fa-twitter fuente_morada"></i></a>
+            </li>
+            <li class="hidden-md hidden-lg">
+              <a href="cita_online.php">
+                <img class="img-responsive img-cita" src="/imagenes/cita_online.png">
+              </a>
+            </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right visible-md visible-lg">
             <li>
-              <a title="Follow us on Instagram" href="" target="_blank">
+              <a title="Follow us on Instagram" href="https://www.instagram.com/prevaler_ve/" target="_blank">
                 <i class="fa fa-instagram fa-2x fuente_morada" aria-hidden="true"></i>
               </a>
             </li>
@@ -76,12 +83,12 @@
               <h2></h2>
             </li>
             <li>
-              <a title="Follow us on Twitter" href="" target="_blank"><i class="fa fa-twitter fa-2x fuente_morada"></i></a>
+              <a title="Follow us on Twitter" href="https://twitter.com/Prevaler_VE" target="_blank"><i class="fa fa-twitter fa-2x fuente_morada"></i></a>
             </li>
             <li class="color_morado">
               <a href="cita_online.php">
                <img class="img-responsive" src="/imagenes/flecha.png">
-               <h5>CITA ONLINE</h5>
+               <h5>SOLICITUD DE CITA MÉDICA</h5>
               </a>
             </li>
         </ul>

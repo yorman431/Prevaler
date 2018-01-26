@@ -276,11 +276,23 @@ class Noticia{
 
   function get_noticia($id){
     /*Metodo para obtener el nombre de una categoria */
-    $sql="SELECT * FROM noticia, imagen WHERE id_not = $id AND id_not = galeria_image AND tabla_image = 'noticia'";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    $resultado=mysql_fetch_array($consulta);
+    $tabla = 'noticia';
+    $sql="SELECT * FROM noticia, imagen WHERE id_not = ? AND id_not = galeria_image AND tabla_image = ?";
 
-    $this->listado = $resultado;
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $id);
+      $query->bindParam(2,$tabla);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      $this->listado = $query->fetchAll();
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
   }
 
   function insertar_noticia(){

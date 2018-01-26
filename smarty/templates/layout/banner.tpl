@@ -2,98 +2,105 @@
 ================================================== -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 visible-md visible-lg sombra">
+    <div class="col-xs-12 sombra">
 
     </div>
-  </div>
+    <div class="col-xs-12">
+     <div class="row">
+        <div class="col-xs-12 col-md-2 visible-md visible-lg">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators hidden-xs hidden-sm">
+            {assign var="cont" value=0}
+            {section name=i loop=$banner2}
+              <li data-target="#carousel" data-slide-to="{$cont}" {if $cont eq "0"}class="active"{/if}></li>
+              {assign var="cont" value=$cont+1}
+            {/section}
+          </ol>
 
-  <div class="row">
-    <div class="col-xs-12 col-md-3 col-lg-2 hidden-sm hidden-xs" style="padding-right: 0">
-      <div id="carousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          {foreach $banner2 as $banner}
-            <li data-target="#carousel" data-slide-to="{$banner@index}" {if $banner@first}class="active"{/if}></li>
-          {/foreach}
-        </ol>
+          <div class="carousel-inner" role="listbox">
 
-        <div class="carousel-inner" role="listbox">
+            {assign var="cont" value=0}
+            {section name=i loop=$banner2}
+              <div {if $cont eq "0"}class="item active" {else} class="item" {/if}>
+                {if $banner2[i].vinculo_ban neq ""}
+                  <a {if $banner2[i].id_ban eq "25"} target="_blank" {/if}title="{$banner2[i].etiqueta_ban}" href="{$banner2[i].vinculo_ban}">
+                    <img alt="{$banner2[i].etiqueta_ban}" src="/imagenes/banner/{$banner2[i].url_ban}">
+                  </a>
+                {else}
+                  <img alt="{$banner2[i].etiqueta_ban}" src="/imagenes/banner/{$banner2[i].url_ban}">
+                {/if}
 
-          {foreach $banner2 as $banner}
-            <div {if $banner@first}class="item active" {else} class="item" {/if}>
-              {if $banner.vinculo_ban neq ""}
-                <a {if $banner.id_ban eq "25"} target="_blank" {/if}title="{$banner.etiqueta_ban}" href="{$banner.vinculo_ban}">
-                  <img alt="{$banner.etiqueta_ban}" src="/imagenes/banner/{$banner.url_ban}">
-                </a>
-              {else}
-                <img alt="{$banner.etiqueta_ban}" src="/imagenes/banner/{$banner.url_ban}">
-              {/if}
-
-              <div class="container-fluid">
-                <div class="carousel-caption inversa">
-                  <h1 class="conclase" align="center"></h1>
+                <div class="container-fluid">
+                  <div class="carousel-caption inversa">
+                    <h1 class="conclase" align="center"></h1>
+                  </div>
                 </div>
               </div>
-            </div>
-          {/foreach}
+              {assign var="cont" value=$cont+1}
+            {/section}
 
+          </div>
+
+          <a class="left carousel-control visible-xs visible-sm" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control visible-xs visible-sm" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-    </div>
 
-    <div class="col-xs-12 col-md-9 col-lg-10">
-      <div id="carouselPrincipal" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          {foreach $banner1 as $banner}
-            <li data-target="#carouselPrincipal" data-slide-to="{$banner@index}" {if $banner@first}class="active"{/if}></li>
-          {/foreach}
-        </ol>
+      <div class="col-xs-12 col-md-10">
+        <div id="carouselPrincipal" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators hidden-xs hidden-sm">
+            {assign var="cont" value=0}
+            {section name=i loop=$banner1}
+              <li data-target="#carouselPrincipal" data-slide-to="{$cont}" {if $cont eq "0"}class="active"{/if}></li>
+              {assign var="cont" value=$cont+1}
+            {/section}
+          </ol>
 
-        <div class="carousel-inner" role="listbox">
+          <div class="carousel-inner" role="listbox">
 
-          {foreach $banner1 as $banner}
-            <div {if $banner@first}class="item active" {else} class="item"{/if}>
-              {if $banner.vinculo_ban neq ""}
-                <a {if $banner.id_ban eq "25"} target="_blank" {/if}title="{$banner.etiqueta_ban}" href="{$banner.vinculo_ban}">
-                  <img alt="{$banner.etiqueta_ban}" src="/imagenes/banner/{$banner.url_ban}">
-                </a>
-              {else}
-                <img alt="{$banner.etiqueta_ban}" src="/imagenes/banner/{$banner.url_ban}">
-              {/if}
+            {assign var="cont" value=0}
+            {section name=i loop=$banner1}
+              <div {if $cont eq "0"}class="item active" {else} class="item"{/if}>
+                {if $banner1[i].vinculo_ban neq ""}
+                  <a {if $banner1[i].id_ban eq "25"} target="_blank" {/if}title="{$banner1[i].etiqueta_ban}" href="{$banner1[i].vinculo_ban}">
+                    <img alt="{$banner1[i].etiqueta_ban}" src="/imagenes/banner/{$banner1[i].url_ban}">
+                  </a>
+                {else}
+                  <img alt="{$banner1[i].etiqueta_ban}" src="/imagenes/banner/{$banner1[i].url_ban}">
+                {/if}
 
-              <div class="container-fluid">
-                <div class="carousel-caption inversa">
-                  <h1 class="conclase" align="center"></h1>
+                <div class="container-fluid">
+                  <div class="carousel-caption inversa">
+                    <h1 class="conclase" align="center"></h1>
+                  </div>
                 </div>
               </div>
-            </div>
-          {/foreach}
+              {assign var="cont" value=$cont+1}
+            {/section}
 
+          </div>
+
+          <a class="left carousel-control visible-xs visible-sm" href="#carouselPrincipal" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control visible-xs visible-sm" href="#carouselPrincipal" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <a class="left carousel-control" href="#carouselPrincipal" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carouselPrincipal" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
+     </div>
     </div>
   </div>
-
-
 </div>
 <!-- Fin Banner Principal
 ================================================== -->

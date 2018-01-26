@@ -22,7 +22,7 @@ function faq2(){
   var FAQ2 = JSON.parse(localStorage.getItem("faq2"));
   var respuesta = document.getElementById("visible_"+id);
   respuesta =respuesta.style.display;
-    if(respuesta != 'block'){
+    if(respuesta !== 'block'){
       if($.isEmptyObject(FAQ2)){
         localStorage.setItem("faq2", JSON.stringify(id));
         $("#visible_"+id).css('display','block');
@@ -44,12 +44,12 @@ function faq3(){
   var FAQ = JSON.parse(localStorage.getItem("faq"));
   if($.isEmptyObject(FAQ)){
     localStorage.setItem("faq", JSON.stringify(id));
-    $(".panel_"+id).css('display','flex');
+    $(".panel_"+id).css('display','block');
     $('#default').css('display','none');
   }else{
     $('#default').css('display','none');
     $(".panel_"+FAQ).css('display','none');
-    $(".panel_"+id).css('display','flex');
+    $(".panel_"+id).css('display','block');
     localStorage.setItem("faq", JSON.stringify(id));
   }
  

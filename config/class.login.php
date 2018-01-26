@@ -44,6 +44,31 @@ class Auth {
   var $model;
   var $style;
   var $insurance;
+  var $sede;
+
+  var $cedula;
+  var $direccion;
+  var $motivo;
+  var $especialidad;
+  var $medico;
+  var $nombre_pol;
+  var $cedula_pol;
+  var $empresa;
+  var $seguro;
+
+  var $nombre1;
+  var $apellido1;
+  var $cedula1;
+  var $fecha1;
+  var $direccion1;
+  var $diagnostico;
+  var $procedimiento;
+
+  var $nombre2;
+  var $apellido2;
+  var $cedula2;
+  var $fecha2;
+  var $direccion2;
 
   var $connection;
 
@@ -59,32 +84,61 @@ class Auth {
   }
 
   function asignar_ingreso(){
-
+    /* Metodo para asignar valores de los input
+    para realizar ingreso o cambio  de contraseña */
     $this->nombre=$_POST['nombre'];
     $this->telefono=$_POST['telefono'];
     $this->email=$_POST['email'];
+    $this->sede=$_POST['sede'];
     $this->comentario=$_POST['comentario'];
-  }
-  function asignar_ingreso_quote(){
-    $this->name=$_POST['name'];
-    $this->phone=$_POST['phone'];
-    $this->email=$_POST['email'];
-    $this->year=$_POST['year'];
-    $this->make=$this->get_modelo($_POST['make']);
-    $this->model=$_POST['model'];
-    $this->style=$_POST['style'];
-    $this->insurance=$_POST['insurance'];
   }
 
   function asignar_ingreso2(){
     /* Metodo para asignar valores de los input
     para realizar ingreso o cambio  de contraseña */
     $this->nombre=$_POST['nombre'];
-    $this->telefono=$_POST['telefono'];
+    $this->cedula=$_POST['cedula'];
+    $this->fecha=$_POST['fecha'];
     $this->email=$_POST['email'];
-    $this->comentario=$_POST['comentario'];
-    $this->producto=$_POST['producto'];
-    $this->codigo=$_POST['codigo'];
+    $this->telefono=$_POST['telefono'];
+    $this->direccion=$_POST['direccion'];
+    $this->motivo=$_POST['motivo'];
+    $this->sede=$_POST['sede'];
+    $this->especialidad=$_POST['especialidad'];
+    $this->medico=$_POST['medico'];
+
+    $this->nombre_pol=$_POST['nombre_pol'];
+    $this->cedula_pol=$_POST['cedula_pol'];
+    $this->empresa=$_POST['empresa'];
+    $this->seguro=$_POST['seguro'];
+  }
+
+  function asignar_ingreso3(){
+
+    $this->nombre1=$_POST['nombre1'];
+    $this->apellido1=$_POST['apellido1'];
+    $this->cedula1=$_POST['cedula1'];
+    $this->fecha1=$_POST['fecha1'];
+    $this->email=$_POST['email'];
+    $this->telefono=$_POST['telefono'];
+    $this->direccion1=$_POST['direccion1'];
+
+    $this->nombre_pol=$_POST['nombre_pol'];
+    $this->cedula_pol=$_POST['cedula_pol'];
+    $this->empresa=$_POST['empresa'];
+    $this->seguro=$_POST['seguro'];
+    $this->sede=$_POST['sede'];
+    $this->especialidad=$_POST['especialidad'];
+    $this->medico=$_POST['medico'];
+    $this->diagnostico=$_POST['diagnostico'];
+    $this->procedimiento=$_POST['procedimiento'];
+
+    $this->nombre2=$_POST['nombre2'];
+    $this->apellido2=$_POST['apellido2'];
+    $this->cedula2=$_POST['cedula2'];
+    $this->fecha2=$_POST['fecha2'];
+    $this->direccion2=$_POST['direccion2'];
+
   }
 
   function cambiar_password($login_, $old_passwd, $new_passwd){
@@ -224,38 +278,40 @@ class Auth {
   function enviar_contacto(){
     //metodo para el envio desde el formulario de contacto
     $this->asignar_ingreso();
-    $cuerpo ="<img src='http://dellecucine.com/imagenes/logo_admin.png' /><br /><br />
+    $nombre_sede = $this->sede;
+
+    $resultado = $this->datoSede($nombre_sede);
+    $cuerpo ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/PREVALER.png' /><br /><br />
 		<u>Datos de Entrada:</u><br />";
     $cuerpo .="<br />";
     $cuerpo .= "<strong>Nombre Completo: </strong>".utf8_decode($this->nombre)."<br />" ;
     $cuerpo .= "<strong>Número de telefono: </strong>".$this->telefono."<br />" ;
     $cuerpo .= "<strong>E-mail: </strong>".$this->email."<br />" ;
-    $cuerpo .= "<strong>Comentarios: </strong>".$this->comentario."<br />";
+    $cuerpo .= "<strong>Mensaje: </strong>".$this->comentario."<br />";
     $cuerpo .= "<br />";
     $cuerpo .= "----  Fin  ----";
     $cuerpo .= "<br />";
-    $subject= "Contacto  Web Delle Cucine";
-    $subject2= "Contacto  Web Delle Cucine";
-    $basemailfor="dellecucine@gmail.com";
+    $subject= "Contacto  Web Prevaler";
+    $subject2= "Contacto  Web Prevaler";
+    $basemailfor=$resultado['email_sede'];
     //$basemailfor="sales@nickautoglass.com";
     $basemailfrom = $this->email;
-    $respuesta ="<img src='http://dellecucine.com/imagenes/logo_admin.png' /><br />
+    $respuesta ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/PREVALER.png' /><br />
 		<strong>Saludos Sr(a).: $this->nombre $this->apellido</strong><br /><br />
 		Nosotros hemos recibido su mensaje, nuestro departamento de atención al cliente le responderá lo más pronto posible<br />
-		Gracias por contactar a Delle Cucine.<br />
-		Delle Cucine<br /><br />
+		Gracias por contactar a Prevaler.<br />
+		Prevaler<br /><br />
 		Tel&eacute;fonos: <br/>
-		+1 (954) 451-3247<br />
-		Facebook: <a href='https://es-la.facebook.com/Delle-Cucine-LLC-184302075471616/'>Delle Cucine</a><br />
-		Twitter: <a href='https://twitter.com/dellecucine'>@Delle Cucine</a><br />
-		Instagram: <a href='https://www.instagram.com/dellecucine/'>@Delle Cucine</a><br />
-		www.dellecucine.com
+		".$resultado['telefono_sede']."<br />
+		Twitter: <a href='https://twitter.com/Prevaler_VE'>@Prevaler_VE</a><br />
+		Instagram: <a href='https://www.instagram.com/prevaler_ve/'>@prevaler_ve</a><br />
+		".$resultado['email_sede']."
 		<br /><br />
 		Atentamente,<br />
-		Delle Cucine.";
+		Clínica Prevaler.";
     $this->mensaje="<strong>&iexcl;Excelente!</strong> Su Mensaje ha sido enviado exitosamente.";
 
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer();
     $mail->From = $basemailfrom;
     $mail->FromName = utf8_decode($subject);
     $mail->AddAddress($basemailfor, $this->nombre." ".$this->apellido);
@@ -264,7 +320,7 @@ class Auth {
     $mail->AltBody = $cuerpo;
     $exito = $mail->Send();
 
-    $mail2 = new PHPMailer(true);
+    $mail2 = new PHPMailer();
     $mail2->From = $basemailfor;
     $mail2->FromName = utf8_decode($subject2);
     $mail2->AddAddress($basemailfrom, $this->nombre." ".$this->apellido);
@@ -272,66 +328,222 @@ class Auth {
     $mail2->Body = $respuesta;
     $mail2->AltBody = $respuesta;
     $exito = $mail2->Send();
-
   }
 
-  function enviar_solicitud(){
-    //metodo para el envio desde el formulario de contacto
+  function enviar_cita(){
     $this->asignar_ingreso2();
-    $cuerpo ="<img src='http://dellecucine.com/imagenes/logo_admin.png' /><br /><br />
+    $nombre_sede = $this->sede;
+    $resultado = $this->datoSede($nombre_sede);
+    $cuerpo ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/logo_admin.png' /><br /><br />
 		<u>Datos de Entrada:</u><br />";
     $cuerpo .="<br />";
     $cuerpo .= "<strong>Nombre Completo: </strong>".utf8_decode($this->nombre)."<br />" ;
-    $cuerpo .= "<strong>Número de telefono: </strong>".$this->telefono."<br />" ;
+    $cuerpo .= "<strong>Número de Cédula: </strong>".$this->cedula."<br />" ;
+    $cuerpo .= "<strong>Fecha de Nacimiento: </strong>".$this->fecha."<br />";
     $cuerpo .= "<strong>E-mail: </strong>".$this->email."<br />" ;
-    $cuerpo .= "<strong>Comentarios: </strong>".$this->comentario."<br />";
-    $cuerpo .= "<strong>Categor&iacute;a del Producto: </strong>".$this->codigo."<br />" ;
-    $cuerpo .= "<strong>Producto Solicitado: </strong>".$this->producto."<br />";
+    $cuerpo .= "<strong>Teléfono: </strong>".$this->telefono."<br />" ;
+    $cuerpo .= "<strong>Domicilio: </strong>".$this->direccion."<br />" ;
+    $cuerpo .= "<strong>Motivo: </strong>".$this->motivo."<br />" ;
+    $cuerpo .= "<strong>Especialidad Médica: </strong>".$this->especialidad."<br />";
+    $cuerpo .= "<strong>Médico Elegido: </strong>".$this->medico."<br /><br />";
+    if ($this->seguro != null) {
+      $cuerpo .= "<strong>Cita Con Póliza de Seguro </strong><br /><br />";
+      $cuerpo .= "<strong>Titular de la Póliza: </strong>".utf8_decode($this->nombre_pol)."<br />" ;
+      $cuerpo .= "<strong>Cédula del Titular de la Póliza: </strong>".$this->cedula_pol."<br />" ;
+      $cuerpo .= "<strong>Empresa: </strong>".$this->empresa."<br />";
+      $cuerpo .= "<strong>Aseguradora: </strong>".$this->seguro."<br />" ;
+    }else{
+      $cuerpo .= "<strong>Cita Sin Póliza de Seguro </strong><br />";
+    }
+
     $cuerpo .= "<br />";
     $cuerpo .= "----  Fin  ----";
     $cuerpo .= "<br />";
-    $subject= "Contacto  Web Delle Cucine";
-    $subject2= "Contacto  Web Delle Cucine";
-    $basemailfor="dellecucine@gmail.com";
-    //$basemailfor="sales@nickautoglass.com";
+    $subject= "Solicitud de Cita  Web Prevaler";
+    $subject2= "Solicitud de Cita  Web Prevaler";
+
+    switch ($resultado['id_sede']) {
+      case '1':
+        $correo_envio="citas.porlamar@prevaler.com";
+        break;
+      case '2':
+        $correo_envio="citas.caracas@prevaler.com";
+        break;
+      case '3':
+        $correo_envio="citas.maracay@prevaler.com";
+        break;
+      case '4':
+        $correo_envio="citas.valencia@prevaler.com";
+        break;
+      case '8':
+        $correo_envio="citas.valenciasur@prevaler.com";
+        break;
+
+      default:
+        $correo_envio="amadorafaelmujica@gmail.com";
+        break;
+    }
+
+    $basemailfor=$resultado['email_sede'];
+    //$basemailfor=$correo_envio;
     $basemailfrom = $this->email;
-    $respuesta ="<img src='http://dellecucine.com/imagenes/logo_admin.png' /><br />
+    $respuesta ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/logo_admin.png' /><br />
 		<strong>Saludos Sr(a).: $this->nombre $this->apellido</strong><br /><br />
-		Nosotros hemos recibido su solicitud, nuestro departamento de atención al cliente le responderá lo más pronto posible<br />
-		Gracias por contactar a Delle Cucine.<br />
-		Delle Cucine<br /><br />
+		Nosotros hemos recibido su Solicitud de Cita, nuestro departamento de atención al cliente le responderá lo más pronto posible<br />
+		Gracias por contactar a Prevaler.<br />
+		Prevaler<br /><br />
 		Tel&eacute;fonos: <br/>
-		+1 (954) 451-3247<br />
-		Facebook: <a href='https://es-la.facebook.com/Delle-Cucine-LLC-184302075471616/'>Delle Cucine</a><br />
-		Twitter: <a href='https://twitter.com/dellecucine'>@Delle Cucine</a><br />
-		Instagram: <a href='https://www.instagram.com/dellecucine/'>@Delle Cucine</a><br />
-		www.dellecucine.com
+		".$resultado['telefono_sede']."<br />
+		Twitter: <a href='https://twitter.com/Prevaler_VE'>@Prevaler_VE</a><br />
+		Instagram: <a href='https://www.instagram.com/prevaler_ve/'>@prevaler_ve</a><br />
+		".$resultado['email_sede']."
 		<br /><br />
 		Atentamente,<br />
-		Delle Cucine.";
-    $this->mensaje="Su Solicitud ha sido enviada exitosamente.";
+		Clínica Prevaler.";
+    $this->mensaje="<strong>&iexcl;Excelente!</strong> Su Solicitud de Cita ha sido enviado exitosamente.";
 
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer();
     $mail->From = $basemailfrom;
     $mail->FromName = utf8_decode($subject);
     $mail->AddAddress($basemailfor, $this->nombre." ".$this->apellido);
     $mail->Subject = utf8_decode($subject);
     $mail->Body = $cuerpo;
     $mail->AltBody = $cuerpo;
+    $mail->isHTML(true);
     $exito = $mail->Send();
 
-    $mail2 = new PHPMailer(true);
+    $mail2 = new PHPMailer();
     $mail2->From = $basemailfor;
     $mail2->FromName = utf8_decode($subject2);
     $mail2->AddAddress($basemailfrom, $this->nombre." ".$this->apellido);
     $mail2->Subject = utf8_decode($subject2);
     $mail2->Body = $respuesta;
     $mail2->AltBody = $respuesta;
+    $mail2->isHTML(true);
     $exito = $mail2->Send();
-
-
   }
 
+  function enviar_presupuesto(){
+    //metodo para el envio desde el formulario de contacto
+    $this->asignar_ingreso3();
+    $nombre_sede = $this->sede;
+    $resultado = $this->datoSede($nombre_sede);
+    $cuerpo ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/logo_admin.png' /><br /><br />
+		<u>Datos de Entrada:</u><br />";
+    $cuerpo .="<br />";
+    $cuerpo .= "<strong>Nombre: </strong>".utf8_decode($this->nombre1)."<br />" ;
+    $cuerpo .= "<strong>Apellido: </strong>".$this->apellido1."<br />" ;
+    $cuerpo .= "<strong>RIF/Cédula: </strong>".$this->cedula1."<br />" ;
+    $cuerpo .= "<strong>Fecha de Nacimiento: </strong>".$this->fecha1."<br />";
+    $cuerpo .= "<strong>E-mail: </strong>".$this->email."<br />" ;
+    $cuerpo .= "<strong>Teléfono: </strong>".$this->telefono."<br />" ;
+    $cuerpo .= "<strong>Domicilio: </strong>".$this->direccion1."<br />" ;
+    $cuerpo .= "<strong>Empresa: </strong>".$this->empresa."<br />";
+    $cuerpo .= "<strong>Especialidad Médica: </strong>".$this->especialidad."<br />";
+    $cuerpo .= "<strong>Médico Elegido: </strong>".$this->medico."<br />";
+    $cuerpo .= "<strong>Diagnóstico: </strong>".$this->diagnostico."<br />";
+    $cuerpo .= "<strong>Procedimiento: </strong>".$this->procedimiento."<br /><br />";
+    if ($this->seguro != null) {
+      $cuerpo .= "<strong>Presupuesto Con Póliza de Seguro </strong><br /><br />";
+      $cuerpo .= "<strong>Titular de la Póliza: </strong>".utf8_decode($this->nombre_pol)."<br />" ;
+      $cuerpo .= "<strong>Cédula del Titular de la Póliza: </strong>".$this->cedula_pol."<br />" ;
+      $cuerpo .= "<strong>Empresa Aseguradora: </strong>".$this->seguro."<br />" ;
+    }else{
+      $cuerpo .= "<strong>Presupuesto Sin Póliza de Seguro </strong><br /><br />";
+      $cuerpo .= "<strong>Datos de Facturación </strong><br /><br />";
+      $cuerpo .= "<strong>Nombre: </strong>".utf8_decode($this->nombre2)."<br />" ;
+      $cuerpo .= "<strong>Apellido: </strong>".$this->apellido2."<br />" ;
+      $cuerpo .= "<strong>RIF/Cédula: </strong>".$this->cedula2."<br />" ;
+      $cuerpo .= "<strong>Fecha de Nacimiento: </strong>".$this->fecha2."<br />";
+      $cuerpo .= "<strong>Dirección: </strong>".$this->direccion2."<br />" ;
+    }
+
+    $cuerpo .= "<br />";
+    $cuerpo .= "----  Fin  ----";
+    $cuerpo .= "<br />";
+    $subject= "Solicitud de Presupuesto  Web Prevaler";
+    $subject2= "Solicitud de Presupuesto  Web Prevaler";
+
+    switch ($resultado['id_sede']) {
+      case '1':
+        $correo_envio="presupuesto.porlamar@prevaler.com";
+        break;
+      case '2':
+        $correo_envio="presupuesto.porlamar@prevaler.com";
+        break;
+      case '3':
+        $correo_envio="presupuesto.caracas@prevaler.com";
+        break;
+      case '4':
+        $correo_envio="presupuesto.valencia@prevaler.com";
+        break;
+      case '8':
+        $correo_envio="presupuesto.valenciasur@prevaler.com";
+        break;
+
+      default:
+        $correo_envio="amadorafaelmujica@gmail.com";
+        break;
+    }
+
+    $basemailfor=$resultado['email_sede'];
+    //$basemailfor=$correo_envio;
+    $basemailfrom = $this->email;
+    $respuesta ="<img src='http://prevaler.diazcreativos.net.ve/imagenes/logo_admin.png' /><br />
+		<strong>Saludos Sr(a).: $this->nombre1 $this->apellido1</strong><br /><br />
+		Nosotros hemos recibido su Solicitud de Presupuesto, nuestro departamento de atención al cliente le responderá lo más pronto posible<br />
+		Gracias por contactar a Prevaler.<br />
+		Prevaler<br /><br />
+		Tel&eacute;fonos: <br/>
+		".$resultado['telefono_sede']."<br />
+		Twitter: <a href='https://twitter.com/Prevaler_VE'>@Prevaler_VE</a><br />
+		Instagram: <a href='https://www.instagram.com/prevaler_ve/'>@prevaler_ve</a><br />
+		".$resultado['email_sede']."
+		<br /><br />
+		Atentamente,<br />
+		Clínica Prevaler.";
+    $this->mensaje="<strong>&iexcl;Excelente!</strong> Su Solicitud de Presupuesto ha sido enviado exitosamente.";
+
+    $mail = new PHPMailer();
+    $mail->From = $basemailfrom;
+    $mail->FromName = utf8_decode($subject);
+    $mail->AddAddress($basemailfor, $this->nombre." ".$this->apellido);
+    $mail->Subject = utf8_decode($subject);
+    $mail->Body = $cuerpo;
+    $mail->AltBody = $cuerpo;
+    $mail->isHTML(true);
+    $exito = $mail->Send();
+
+    $mail2 = new PHPMailer();
+    $mail2->From = $basemailfor;
+    $mail2->FromName = utf8_decode($subject2);
+    $mail2->AddAddress($basemailfrom, $this->nombre." ".$this->apellido);
+    $mail2->Subject = utf8_decode($subject2);
+    $mail2->Body = $respuesta;
+    $mail2->AltBody = $respuesta;
+    $mail2->isHTML(true);
+    $exito = $mail2->Send();
+  }
+
+  function datoSede($sede){
+
+    $sql = 'SELECT * FROM sede WHERE nombre_sede = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $sede);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      return $query->fetch();
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+    return 'Error, no existe sede: '.$sede;
+  }
 
   function recuperar_clave(){
     //metodo para el enviio desde el formulario de contacto
@@ -371,4 +583,3 @@ class Auth {
   }
 
 }
-?>
