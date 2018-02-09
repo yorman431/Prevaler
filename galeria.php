@@ -117,5 +117,3 @@ $smarty->assign("publicidad", $publicidad->listado);
 $smarty->assign("publicidad2", $publicidad2->listado);
 $smarty->force_compile=true;
 $smarty->display('galeria.tpl');
-/* Fin footer para Smarty */
-?>
