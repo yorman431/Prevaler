@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-01-19 15:08:31
+/* Smarty version 3.1.29, created on 2018-02-09 18:39:43
   from "D:\Websites\Prevaler\smarty\templates\admin\hotel\lista_hotel.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a6209efa04471_57441433',
+  'unifunc' => 'content_5a7deaef438be4_58304472',
   'file_dependency' => 
   array (
     '8dcbdf84322604df2f4c8e9b4d7a79ca06d3f32e' => 
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:admin/layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a6209efa04471_57441433 ($_smarty_tpl) {
+function content_5a7deaef438be4_58304472 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

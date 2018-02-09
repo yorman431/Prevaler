@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 16:47:02
+/* Smarty version 3.1.29, created on 2018-02-09 17:51:17
   from "D:\Websites\Prevaler\smarty\templates\layout\banner.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7496069f1643_16589153',
+  'unifunc' => 'content_5a7ddf959bbbf6_48758629',
   'file_dependency' => 
   array (
     '6de265a15a4f0bc287cc7a3aef27d303fb9a48e3' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7496069f1643_16589153 ($_smarty_tpl) {
+function content_5a7ddf959bbbf6_48758629 ($_smarty_tpl) {
 ?>
 <!-- Banner Principal
 ================================================== -->

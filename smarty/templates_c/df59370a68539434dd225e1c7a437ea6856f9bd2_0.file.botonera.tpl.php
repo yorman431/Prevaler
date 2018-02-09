@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 16:47:02
+/* Smarty version 3.1.29, created on 2018-02-09 17:51:17
   from "D:\Websites\Prevaler\smarty\templates\layout\botonera.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7496066f9362_35842365',
+  'unifunc' => 'content_5a7ddf9510d376_73788665',
   'file_dependency' => 
   array (
     'df59370a68539434dd225e1c7a437ea6856f9bd2' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7496066f9362_35842365 ($_smarty_tpl) {
+function content_5a7ddf9510d376_73788665 ($_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid top-background hidden-lg hidden-md">

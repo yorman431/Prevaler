@@ -2,242 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fe10888-d784-4c72-acd2-871df5b99957" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/imagenes/ahorra.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ahorradores_25.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ahorro_12.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ajax-loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/anterior.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/anuncio_back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/asesoria1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/asesoria2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/atras.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ayuda.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ayuda2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/back-box-label-black.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/bajalo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/bajalo2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1302131368.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1302131402.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1492666769.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1492666812.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1503345108.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1503941625.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1508529284.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1508529425.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner/1513949123.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/banner_sm.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/beneficios.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/beneficios2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/bisuteria.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/borrar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/boton_suscibir.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/botonera.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/buscar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/calendar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cambiar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/candado.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/candado2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/categoria.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cerrar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cita_online.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/closelabel.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/col-xs-10.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/col-xs-2-2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/col-xs-2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/col-xs-4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/col-xs-6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/construccion.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/contacto.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/contenido/1504128607.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/contenido1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/contenido_prueba_13.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cuadrito_09b.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cuadritos.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cuadros.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/cuadros2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/dale.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/delete.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/delete.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/detalle.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/detalles.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/documentos.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/editar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/electronico.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/eliminar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/empresa.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/entrepiso.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/enviar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/enviar_11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/especialidad/1512504118.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/especialidad/1512670328.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/especialidad/1513181649.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/especialidad/1513181692.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/especialidad/1513181751.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/evento.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/facebook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/filipinas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flecha.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flecha_09.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flecha_sede.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flechita_11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flechita_13.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flechita_menu.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/flechita_nueva.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_03.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_admin.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_botonera_06.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_formulario_11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_pie_14.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_servicio.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/fondo_sicribase.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811518.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811545.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811571.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811610.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811636.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811676.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504811705.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504813197.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/1504813741.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/AleX.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/Alex3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/I_constructor.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/I_usuario.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/adidas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/ahorradores_25.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/apple.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/arriba.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/asesoria(1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/asesoria(2).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/asesoria.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/asesoria_18.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/bajo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/contenido1(1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/contenido1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/empresa-prefabricados.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/entrepiso(1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/entrepiso.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/fotos_servicios_10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/fotos_servicios_13.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/gradas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/idat_logo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/imagenes_peq_19.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/imagenes_peq_21.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/logos_11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/logos_13(1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/logos_13.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/logos_15.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/logotipo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/losa_hueca_11.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/losa_hueca_13.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/losa_hueca_15.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/losa_nueva.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/losa_quince_07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/paul-logo_05.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/plantilla1_07-02.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_a.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_b.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_d.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_e.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_f.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_g.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_h.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_i.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos-imagen_j.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos_07.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/productos_10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/scia_logo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/sistemas_15.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/sistemas_18.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/titulos_26.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/galeria/images/titulos_28.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/generar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/graficas.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/historial.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/historial2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/icono_principal.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/iconos_redes_13.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/iconos_redes_15.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/iconos_redes_17.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/iconos_redes_19.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/imagenjpg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/imagenjpg_big.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/imprimir.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/leer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/lightbox-blank.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/linea.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/links.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/loading.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/logros.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/mapa1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/marca_producto.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/mi_pedido.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/mi_perfil.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/msn.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/naticia3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/next.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/next.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/nextlabel.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/no.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/no.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/no_seleccion.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticia1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticia2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticia2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticia3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticia4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/noticias.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/nuevo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/page_flip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/pagos.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/pdf.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/pdf2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/pdf_big.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/pedidos.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/preguntas.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/presupuesto.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/presupuesto.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/prev.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/prev.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/prevlabel.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/primero.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/publicidad1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/publicidad2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/publicidad3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/redes_sociales_01.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/redes_sociales_03.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/redes_sociales_05.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/registro.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede_caracas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede_maracay.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede_porlamar.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede_valenciaNort.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/sede_valenciaSur.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/si.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/si.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/siguiente.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/tecnica.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/triples.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/triples2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/twitter.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/ultimo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/user.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/user2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/web-en-construccion.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/word.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/word_big.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/xls.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/imagenes/xls_big.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/smarty/templates_c/6de265a15a4f0bc287cc7a3aef27d303fb9a48e3_0.file.banner.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/6de265a15a4f0bc287cc7a3aef27d303fb9a48e3_0.file.banner.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/72c1f0d091a3fe685c782c20f1177f39b7d89031_0.file.panel_central.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/72c1f0d091a3fe685c782c20f1177f39b7d89031_0.file.panel_central.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/8dcbdf84322604df2f4c8e9b4d7a79ca06d3f32e_0.file.lista_hotel.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/8dcbdf84322604df2f4c8e9b4d7a79ca06d3f32e_0.file.lista_hotel.tpl.php" />
       <change beforePath="$PROJECT_DIR$/smarty/templates_c/ac91fc2b526eca9ca0b0855656f804a18f38b74b_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/ac91fc2b526eca9ca0b0855656f804a18f38b74b_0.file.header.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/b1c2d038d66608ba1c56820c692803791a5f0c12_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/b1c2d038d66608ba1c56820c692803791a5f0c12_0.file.footer.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/b7e13a1bc355ed4c59488a300386343519ee6318_0.file.menu.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/b7e13a1bc355ed4c59488a300386343519ee6318_0.file.menu.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/bef29596a635554cdf7f40855846b7e0940717c9_0.file.sedes.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/bef29596a635554cdf7f40855846b7e0940717c9_0.file.sedes.tpl.php" />
       <change beforePath="$PROJECT_DIR$/smarty/templates_c/c872cfeaf8cfc3b890a19e7c8a5b2b351775c2bc_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/c872cfeaf8cfc3b890a19e7c8a5b2b351775c2bc_0.file.footer.tpl.php" />
       <change beforePath="$PROJECT_DIR$/smarty/templates_c/df59370a68539434dd225e1c7a437ea6856f9bd2_0.file.botonera.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/df59370a68539434dd225e1c7a437ea6856f9bd2_0.file.botonera.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/smarty/templates_c/e97b948f50b44c59d328d9f5d557e401faef5a88_0.file.head2.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/e97b948f50b44c59d328d9f5d557e401faef5a88_0.file.head2.tpl.php" />
       <change beforePath="$PROJECT_DIR$/smarty/templates_c/eca78738ec32c560ed5b6b767fcf9ce6d1f3f3e5_0.file.publicidad.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/eca78738ec32c560ed5b6b767fcf9ce6d1f3f3e5_0.file.publicidad.tpl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -277,193 +51,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="presupuesto.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/presupuesto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smarty/templates/layout/header.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sedes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sedes.php">
+      <file leaf-file-name="medicoXls.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/medicoXls.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1515766841934" expanded="true" signature="2165:3595" ph="..." />
-                <marker date="1515766841934" expanded="true" signature="2232:2958" ph="{...}" />
-                <marker date="1515766841934" expanded="true" signature="2376:2469" ph="{&quot;mapTypeId&quot;: google.maps.MapTypeId.ROADMAP...}" />
-                <marker date="1515766841934" expanded="true" signature="2635:2703" ph="{&quot;position&quot;: myLatLng...}" />
-                <marker date="1515766841934" expanded="true" signature="2729:2803" ph="{&quot;location&quot;: pyrmont...}" />
-                <marker date="1515766841934" expanded="true" signature="3002:3167" ph="{...}" />
-                <marker date="1515766841934" expanded="true" signature="3065:3160" ph="{...}" />
-                <marker date="1515766841934" expanded="true" signature="3114:3154" ph="{...}" />
-                <marker date="1515766841934" expanded="true" signature="3205:3513" ph="{...}" />
-                <marker date="1515766841934" expanded="true" signature="3291:3354" ph="{&quot;map&quot;: map...}" />
-                <marker date="1515766841934" expanded="true" signature="3422:3504" ph="{...}" />
+                <marker date="1518202274662" expanded="true" signature="3211:3291" ph="SELECT * FRO... medico" />
+                <marker date="1518202274662" expanded="true" signature="3563:3736" ph="INSERT INTO medico... " />
+                <marker date="1518202274662" expanded="true" signature="3891:3956" ph="INSERT INTO facilidad... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sedes.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smarty/templates/sedes.tpl">
+      <file leaf-file-name="zzz.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zzz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nosotros.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nosotros.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.contenido.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/class.contenido.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="128" column="82" lean-forward="false" selection-start-line="128" selection-start-column="82" selection-end-line="128" selection-end-column="82" />
-              <folding>
-                <marker date="1516998156108" expanded="true" signature="1983:2224" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="2717:2811" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="3810:3876" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="4035:4120" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="4698:4779" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="5034:5109" ph="SELECT * FRO... imagen" />
-                <marker date="1516998156108" expanded="true" signature="5818:5916" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="6963:7112" ph="SELECT *, id... contenido" />
-                <marker date="1516998156108" expanded="true" signature="7273:7407" ph="SELECT id_im... imagen" />
-                <marker date="1516998156108" expanded="true" signature="8045:8085" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="9094:9196" ph="SELECT * FRO... contenido" />
-                <marker date="1516998156108" expanded="true" signature="9771:9893" ph="INSERT INTO contenido... " />
-                <marker date="1516998156108" expanded="true" signature="10480:10525" ph="SELECT * FRO... link" />
-                <marker date="1516998156108" expanded="true" signature="11114:11304" ph="UPDATE contenido... " />
-                <marker date="1516998156108" expanded="true" signature="11854:11899" ph="SELECT * FRO... link" />
-                <marker date="1516998156108" expanded="true" signature="12225:12323" ph="SELECT * FRO... linkxsub" />
-                <marker date="1516998156108" expanded="true" signature="12868:12908" ph="DELETE FROM contenido... " />
-                <marker date="1516998156108" expanded="true" signature="12977:13049" ph="DELETE FROM imagen... " />
-                <marker date="1516998156108" expanded="true" signature="13198:13296" ph="SELECT * FRO... linkxsub" />
-                <marker date="1516998156108" expanded="true" signature="13768:13812" ph="SELECT nombr... link" />
-                <marker date="1516998156108" expanded="true" signature="14173:14220" ph="SELECT nombr... sublink" />
-                <marker date="1516998156108" expanded="true" signature="14934:14975" ph="SELECT MAX(i... producto" />
-                <marker date="1516998156108" expanded="true" signature="15516:15557" ph="UPDATE perfiles... " />
-                <marker date="1516998156108" expanded="true" signature="15630:15688" ph="UPDATE perfiles... " />
-                <marker date="1516998156108" expanded="true" signature="15817:15870" ph="SELECT id_pe... perfiles" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.registro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/class.registro.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3230">
-              <caret line="200" column="11" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
-              <folding>
-                <marker date="1514394294515" expanded="true" signature="3663:4302" ph="SELECT *, id... registro" />
-                <marker date="1514394294515" expanded="true" signature="4328:4371" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="5033:5074" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="6472:6555" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="6800:7209" ph="INSERT INTO registro... " />
-                <marker date="1514394294515" expanded="true" signature="7805:7865" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="8438:8832" ph="INSERT INTO registro... " />
-                <marker date="1514394294515" expanded="true" signature="10499:10908" ph="INSERT INTO registro... " />
-                <marker date="1514394294515" expanded="true" signature="11587:11670" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="11925:12332" ph="INSERT INTO registro... " />
-                <marker date="1514394294515" expanded="true" signature="13044:13646" ph="UPDATE registro... " />
-                <marker date="1514394294515" expanded="true" signature="14283:14917" ph="UPDATE registro... " />
-                <marker date="1514394294515" expanded="true" signature="15398:15469" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="15726:15794" ph="UPDATE registro... " />
-                <marker date="1514394294515" expanded="true" signature="16085:16124" ph="DELETE FROM registro... " />
-                <marker date="1514394294515" expanded="true" signature="16193:16238" ph="SELECT * FRO... pedidos" />
-                <marker date="1514394294515" expanded="true" signature="16392:16445" ph="DELETE FROM detalle_pedido... " />
-                <marker date="1514394294515" expanded="true" signature="16519:16562" ph="DELETE FROM pedidos... " />
-                <marker date="1514394294515" expanded="true" signature="16837:16916" ph="SELECT * FRO... registro" />
-                <marker date="1514394294515" expanded="true" signature="18774:18782" ph="é" />
-                <marker date="1514394294515" expanded="true" signature="20794:20834" ph="SELECT * FRO... estado" />
-                <marker date="1514394294515" expanded="true" signature="21200:21270" ph="SELECT * FRO... municipio" />
-                <marker date="1514394294515" expanded="true" signature="21625:21673" ph="SELECT nombr... estado" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.seguro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/class.seguro.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-              <folding>
-                <element signature="n#listar_seguro#0;n#Seguro#0;n#!!top" expanded="false" />
-                <marker date="1516996974444" expanded="true" signature="1378:1423" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996974444" expanded="true" signature="1808:1850" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996974444" expanded="true" signature="2356:2396" ph="DELETE FROM aseguradora... " />
-                <marker date="1516996974444" expanded="true" signature="2871:2925" ph="SELECT COUNT... aseguradora" />
-                <marker date="1516996974444" expanded="true" signature="3230:3297" ph="INSERT INTO aseguradora... " />
-                <marker date="1516996974444" expanded="true" signature="4045:4120" ph="UPDATE aseguradora... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.seguro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/class.seguro.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="65" column="2" lean-forward="false" selection-start-line="55" selection-start-column="1" selection-end-line="65" selection-end-column="2" />
-              <folding>
-                <marker date="1516996548087" expanded="true" signature="1137:1362" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996548087" expanded="true" signature="1383:1424" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996548087" expanded="true" signature="1682:1727" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996548087" expanded="true" signature="2037:2081" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996548087" expanded="true" signature="2414:2456" ph="DELETE FROM aseguradora... " />
-                <marker date="1516996548087" expanded="true" signature="2773:2832" ph="SELECT * FRO... aseguradora" />
-                <marker date="1516996548087" expanded="true" signature="2993:3069" ph="INSERT INTO aseguradora... " />
-                <marker date="1516996548087" expanded="true" signature="3455:3561" ph="UPDATE aseguradora... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/class.login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7021">
-              <caret line="425" column="11" lean-forward="false" selection-start-line="425" selection-start-column="11" selection-end-line="425" selection-end-column="11" />
-              <folding>
-                <element signature="n#datoSede#0;n#Auth#0;n#!!top" expanded="false" />
-                <marker date="1516996130260" expanded="true" signature="3882:3951" ph="UPDATE usuarios... " />
-                <marker date="1516996130260" expanded="true" signature="4129:4188" ph="SELECT * FRO... usuario" />
-                <marker date="1516996130260" expanded="true" signature="6897:6978" ph="SELECT * FRO... registro" />
-                <marker date="1516996130260" expanded="true" signature="9260:9268" ph="é" />
-                <marker date="1516996130260" expanded="true" signature="9599:9606" ph="¡" />
-                <marker date="1516996130260" expanded="true" signature="13066:13074" ph="é" />
-                <marker date="1516996130260" expanded="true" signature="13405:13412" ph="¡" />
-                <marker date="1516996130260" expanded="true" signature="17695:17703" ph="é" />
-                <marker date="1516996130260" expanded="true" signature="18034:18041" ph="¡" />
-                <marker date="1516996130260" expanded="true" signature="19530:19579" ph="SELECT * FRO... registro" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -598,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -639,6 +245,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -694,6 +301,7 @@
       <workItem from="1516995017322" duration="3270000" />
       <workItem from="1517584517221" duration="1808000" />
       <workItem from="1518099260085" duration="1226000" />
+      <workItem from="1518202773268" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1516202190182</created>
@@ -727,7 +335,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97261000" />
+    <option name="totallyTimeSpent" value="97339000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,8 +348,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15618336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -803,20 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/medico/imagen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/class.medico.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="123" column="57" lean-forward="true" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/seguro/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1274,59 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/class.seguro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="65" column="2" lean-forward="false" selection-start-line="55" selection-start-column="1" selection-end-line="65" selection-end-column="2" />
-          <folding>
-            <marker date="1516996548087" expanded="true" signature="1137:1362" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996548087" expanded="true" signature="1383:1424" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996548087" expanded="true" signature="1682:1727" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996548087" expanded="true" signature="2037:2081" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996548087" expanded="true" signature="2414:2456" ph="DELETE FROM aseguradora... " />
-            <marker date="1516996548087" expanded="true" signature="2773:2832" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996548087" expanded="true" signature="2993:3069" ph="INSERT INTO aseguradora... " />
-            <marker date="1516996548087" expanded="true" signature="3455:3561" ph="UPDATE aseguradora... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/class.seguro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding>
-            <element signature="n#listar_seguro#0;n#Seguro#0;n#!!top" expanded="false" />
-            <marker date="1516996974444" expanded="true" signature="1378:1423" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996974444" expanded="true" signature="1808:1850" ph="SELECT * FRO... aseguradora" />
-            <marker date="1516996974444" expanded="true" signature="2356:2396" ph="DELETE FROM aseguradora... " />
-            <marker date="1516996974444" expanded="true" signature="2871:2925" ph="SELECT COUNT... aseguradora" />
-            <marker date="1516996974444" expanded="true" signature="3230:3297" ph="INSERT INTO aseguradora... " />
-            <marker date="1516996974444" expanded="true" signature="4045:4120" ph="UPDATE aseguradora... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/class.login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7021">
-          <caret line="425" column="11" lean-forward="false" selection-start-line="425" selection-start-column="11" selection-end-line="425" selection-end-column="11" />
-          <folding>
-            <element signature="n#datoSede#0;n#Auth#0;n#!!top" expanded="false" />
-            <marker date="1516996130260" expanded="true" signature="3882:3951" ph="UPDATE usuarios... " />
-            <marker date="1516996130260" expanded="true" signature="4129:4188" ph="SELECT * FRO... usuario" />
-            <marker date="1516996130260" expanded="true" signature="6897:6978" ph="SELECT * FRO... registro" />
-            <marker date="1516996130260" expanded="true" signature="9260:9268" ph="é" />
-            <marker date="1516996130260" expanded="true" signature="9599:9606" ph="¡" />
-            <marker date="1516996130260" expanded="true" signature="13066:13074" ph="é" />
-            <marker date="1516996130260" expanded="true" signature="13405:13412" ph="¡" />
-            <marker date="1516996130260" expanded="true" signature="17695:17703" ph="é" />
-            <marker date="1516996130260" expanded="true" signature="18034:18041" ph="¡" />
-            <marker date="1516996130260" expanded="true" signature="19530:19579" ph="SELECT * FRO... registro" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/presupuesto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1371,41 +913,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/class.registro.php">
+    <entry file="file://$PROJECT_DIR$/nosotros.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="200" column="11" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
-          <folding>
-            <marker date="1514394294515" expanded="true" signature="3663:4302" ph="SELECT *, id... registro" />
-            <marker date="1514394294515" expanded="true" signature="4328:4371" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="5033:5074" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="6472:6555" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="6800:7209" ph="INSERT INTO registro... " />
-            <marker date="1514394294515" expanded="true" signature="7805:7865" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="8438:8832" ph="INSERT INTO registro... " />
-            <marker date="1514394294515" expanded="true" signature="10499:10908" ph="INSERT INTO registro... " />
-            <marker date="1514394294515" expanded="true" signature="11587:11670" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="11925:12332" ph="INSERT INTO registro... " />
-            <marker date="1514394294515" expanded="true" signature="13044:13646" ph="UPDATE registro... " />
-            <marker date="1514394294515" expanded="true" signature="14283:14917" ph="UPDATE registro... " />
-            <marker date="1514394294515" expanded="true" signature="15398:15469" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="15726:15794" ph="UPDATE registro... " />
-            <marker date="1514394294515" expanded="true" signature="16085:16124" ph="DELETE FROM registro... " />
-            <marker date="1514394294515" expanded="true" signature="16193:16238" ph="SELECT * FRO... pedidos" />
-            <marker date="1514394294515" expanded="true" signature="16392:16445" ph="DELETE FROM detalle_pedido... " />
-            <marker date="1514394294515" expanded="true" signature="16519:16562" ph="DELETE FROM pedidos... " />
-            <marker date="1514394294515" expanded="true" signature="16837:16916" ph="SELECT * FRO... registro" />
-            <marker date="1514394294515" expanded="true" signature="18774:18782" ph="é" />
-            <marker date="1514394294515" expanded="true" signature="20794:20834" ph="SELECT * FRO... estado" />
-            <marker date="1514394294515" expanded="true" signature="21200:21270" ph="SELECT * FRO... municipio" />
-            <marker date="1514394294515" expanded="true" signature="21625:21673" ph="SELECT nombr... estado" />
-          </folding>
+        <state relative-caret-position="838">
+          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/class.contenido.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
+        <state relative-caret-position="17">
           <caret line="128" column="82" lean-forward="false" selection-start-line="128" selection-start-column="82" selection-end-line="128" selection-end-column="82" />
           <folding>
             <marker date="1516998156108" expanded="true" signature="1983:2224" ph="SELECT * FRO... contenido" />
@@ -1437,11 +955,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nosotros.php">
+    <entry file="file://$PROJECT_DIR$/config/class.registro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="200" column="11" lean-forward="false" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
+          <folding>
+            <marker date="1514394294515" expanded="true" signature="3663:4302" ph="SELECT *, id... registro" />
+            <marker date="1514394294515" expanded="true" signature="4328:4371" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="5033:5074" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="6472:6555" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="6800:7209" ph="INSERT INTO registro... " />
+            <marker date="1514394294515" expanded="true" signature="7805:7865" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="8438:8832" ph="INSERT INTO registro... " />
+            <marker date="1514394294515" expanded="true" signature="10499:10908" ph="INSERT INTO registro... " />
+            <marker date="1514394294515" expanded="true" signature="11587:11670" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="11925:12332" ph="INSERT INTO registro... " />
+            <marker date="1514394294515" expanded="true" signature="13044:13646" ph="UPDATE registro... " />
+            <marker date="1514394294515" expanded="true" signature="14283:14917" ph="UPDATE registro... " />
+            <marker date="1514394294515" expanded="true" signature="15398:15469" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="15726:15794" ph="UPDATE registro... " />
+            <marker date="1514394294515" expanded="true" signature="16085:16124" ph="DELETE FROM registro... " />
+            <marker date="1514394294515" expanded="true" signature="16193:16238" ph="SELECT * FRO... pedidos" />
+            <marker date="1514394294515" expanded="true" signature="16392:16445" ph="DELETE FROM detalle_pedido... " />
+            <marker date="1514394294515" expanded="true" signature="16519:16562" ph="DELETE FROM pedidos... " />
+            <marker date="1514394294515" expanded="true" signature="16837:16916" ph="SELECT * FRO... registro" />
+            <marker date="1514394294515" expanded="true" signature="18774:18782" ph="é" />
+            <marker date="1514394294515" expanded="true" signature="20794:20834" ph="SELECT * FRO... estado" />
+            <marker date="1514394294515" expanded="true" signature="21200:21270" ph="SELECT * FRO... municipio" />
+            <marker date="1514394294515" expanded="true" signature="21625:21673" ph="SELECT nombr... estado" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/class.seguro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="n#listar_seguro#0;n#Seguro#0;n#!!top" expanded="false" />
+            <marker date="1516996974444" expanded="true" signature="1378:1423" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996974444" expanded="true" signature="1808:1850" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996974444" expanded="true" signature="2356:2396" ph="DELETE FROM aseguradora... " />
+            <marker date="1516996974444" expanded="true" signature="2871:2925" ph="SELECT COUNT... aseguradora" />
+            <marker date="1516996974444" expanded="true" signature="3230:3297" ph="INSERT INTO aseguradora... " />
+            <marker date="1516996974444" expanded="true" signature="4045:4120" ph="UPDATE aseguradora... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/class.seguro.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="838">
-          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <caret line="65" column="2" lean-forward="false" selection-start-line="55" selection-start-column="1" selection-end-line="65" selection-end-column="2" />
+          <folding>
+            <marker date="1516996548087" expanded="true" signature="1137:1362" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996548087" expanded="true" signature="1383:1424" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996548087" expanded="true" signature="1682:1727" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996548087" expanded="true" signature="2037:2081" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996548087" expanded="true" signature="2414:2456" ph="DELETE FROM aseguradora... " />
+            <marker date="1516996548087" expanded="true" signature="2773:2832" ph="SELECT * FRO... aseguradora" />
+            <marker date="1516996548087" expanded="true" signature="2993:3069" ph="INSERT INTO aseguradora... " />
+            <marker date="1516996548087" expanded="true" signature="3455:3561" ph="UPDATE aseguradora... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/class.login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="425" column="11" lean-forward="false" selection-start-line="425" selection-start-column="11" selection-end-line="425" selection-end-column="11" />
+          <folding>
+            <element signature="n#datoSede#0;n#Auth#0;n#!!top" expanded="false" />
+            <marker date="1516996130260" expanded="true" signature="3882:3951" ph="UPDATE usuarios... " />
+            <marker date="1516996130260" expanded="true" signature="4129:4188" ph="SELECT * FRO... usuario" />
+            <marker date="1516996130260" expanded="true" signature="6897:6978" ph="SELECT * FRO... registro" />
+            <marker date="1516996130260" expanded="true" signature="9260:9268" ph="é" />
+            <marker date="1516996130260" expanded="true" signature="9599:9606" ph="¡" />
+            <marker date="1516996130260" expanded="true" signature="13066:13074" ph="é" />
+            <marker date="1516996130260" expanded="true" signature="13405:13412" ph="¡" />
+            <marker date="1516996130260" expanded="true" signature="17695:17703" ph="é" />
+            <marker date="1516996130260" expanded="true" signature="18034:18041" ph="¡" />
+            <marker date="1516996130260" expanded="true" signature="19530:19579" ph="SELECT * FRO... registro" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zzz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/medicoXls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1518202274662" expanded="true" signature="3211:3291" ph="SELECT * FRO... medico" />
+            <marker date="1518202274662" expanded="true" signature="3563:3736" ph="INSERT INTO medico... " />
+            <marker date="1518202274662" expanded="true" signature="3891:3956" ph="INSERT INTO facilidad... " />
+          </folding>
         </state>
       </provider>
     </entry>

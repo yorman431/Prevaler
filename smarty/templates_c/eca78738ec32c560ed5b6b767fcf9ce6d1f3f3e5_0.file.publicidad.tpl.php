@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 16:47:02
+/* Smarty version 3.1.29, created on 2018-02-09 17:51:18
   from "D:\Websites\Prevaler\smarty\templates\layout\publicidad.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a749606cefce3_33216661',
+  'unifunc' => 'content_5a7ddf96388b93_24795974',
   'file_dependency' => 
   array (
     'eca78738ec32c560ed5b6b767fcf9ce6d1f3f3e5' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a749606cefce3_33216661 ($_smarty_tpl) {
+function content_5a7ddf96388b93_24795974 ($_smarty_tpl) {
 ?>
 <div class="col-xs-12 no_padding1">
   <div class="container-fluid">
