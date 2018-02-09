@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fe10888-d784-4c72-acd2-871df5b99957" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/6de265a15a4f0bc287cc7a3aef27d303fb9a48e3_0.file.banner.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/6de265a15a4f0bc287cc7a3aef27d303fb9a48e3_0.file.banner.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/72c1f0d091a3fe685c782c20f1177f39b7d89031_0.file.panel_central.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/72c1f0d091a3fe685c782c20f1177f39b7d89031_0.file.panel_central.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/8dcbdf84322604df2f4c8e9b4d7a79ca06d3f32e_0.file.lista_hotel.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/8dcbdf84322604df2f4c8e9b4d7a79ca06d3f32e_0.file.lista_hotel.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/ac91fc2b526eca9ca0b0855656f804a18f38b74b_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/ac91fc2b526eca9ca0b0855656f804a18f38b74b_0.file.header.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/b1c2d038d66608ba1c56820c692803791a5f0c12_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/b1c2d038d66608ba1c56820c692803791a5f0c12_0.file.footer.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/b7e13a1bc355ed4c59488a300386343519ee6318_0.file.menu.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/b7e13a1bc355ed4c59488a300386343519ee6318_0.file.menu.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/bef29596a635554cdf7f40855846b7e0940717c9_0.file.sedes.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/bef29596a635554cdf7f40855846b7e0940717c9_0.file.sedes.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/c872cfeaf8cfc3b890a19e7c8a5b2b351775c2bc_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/c872cfeaf8cfc3b890a19e7c8a5b2b351775c2bc_0.file.footer.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/df59370a68539434dd225e1c7a437ea6856f9bd2_0.file.botonera.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/df59370a68539434dd225e1c7a437ea6856f9bd2_0.file.botonera.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/e97b948f50b44c59d328d9f5d557e401faef5a88_0.file.head2.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/e97b948f50b44c59d328d9f5d557e401faef5a88_0.file.head2.tpl.php" />
-      <change beforePath="$PROJECT_DIR$/smarty/templates_c/eca78738ec32c560ed5b6b767fcf9ce6d1f3f3e5_0.file.publicidad.tpl.php" afterPath="$PROJECT_DIR$/smarty/templates_c/eca78738ec32c560ed5b6b767fcf9ce6d1f3f3e5_0.file.publicidad.tpl.php" />
-    </list>
+    <list default="true" id="9fe10888-d784-4c72-acd2-871df5b99957" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +289,7 @@
       <workItem from="1516995017322" duration="3270000" />
       <workItem from="1517584517221" duration="1808000" />
       <workItem from="1518099260085" duration="1226000" />
-      <workItem from="1518202773268" duration="78000" />
+      <workItem from="1518202773268" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1516202190182</created>
@@ -335,7 +323,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97339000" />
+    <option name="totallyTimeSpent" value="97715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,7 +336,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15618336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

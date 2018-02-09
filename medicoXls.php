@@ -32,7 +32,6 @@ class EXCEL extends PHPExcel{
     */
     $this->cantidadOk = 0;
     $this->cantidadNOk = 0;
-    $this->accion = "Actualización de Inventario";
     
     $extension = pathinfo(basename($_FILES['excel']['name']), PATHINFO_EXTENSION);
     $uploadOk = 1;
@@ -63,7 +62,7 @@ class EXCEL extends PHPExcel{
 
     $this->sede = $_GET['sede'];
 
-    for($i = 1; $i <= $this->lastRow; $i++){
+    for($i = 2; $i <= $this->lastRow; $i++){
       $guia = strtolower($this->excelHoja->getCell('A'.$i)->getValue());
       
       $this->cargarProducto($i);
