@@ -1,7 +1,8 @@
 <?php
-require_once('/config/Classes/PHPExcel.php');
+require_once('config/Classes/PHPExcel.php');
+include_once('config/conexion.inc.php');
 
-class EXCEL extends PHPExcel{
+class MedicoExcel extends PHPExcel {
   
   var $file;
   var $excelReader;
@@ -19,8 +20,11 @@ class EXCEL extends PHPExcel{
   var $descripcion;
   var $sede;
   var $limite;
+
+  var $connection;
   
   public function __construct(){
+    $this->connection = new Connection();
   }
   
   function checkFile(){
@@ -59,29 +63,30 @@ class EXCEL extends PHPExcel{
   }
 
   function recorrerExcel(){
-
     $this->sede = $_GET['sede'];
 
     for($i = 2; $i <= $this->lastRow; $i++){
       $guia = strtolower($this->excelHoja->getCell('A'.$i)->getValue());
       
-      $this->cargarProducto($i);
+      if ($guia != '')
+        $this->cargarProducto($i);
         
       $this->nombre = '';
       $this->mensaje= '';
       $sql = '';
       $sql2 = '';
     }
-    $this->mensaje = "Productos Actualizados: ".$this->cantidadOk." Productos NO Actualizados: ".$this->cantidadNOk;
+    $this->mensaje = "Medicos Agregados: ".$this->cantidadOk." Medicos Actualizados: ".$this->cantidadNOk;
+    echo ($this->mensaje);
   }
 
   function cargarProducto($column){
-      
     $this->nombre = ucwords(strtolower($this->excelHoja->getCell('B'.$column)->getValue()));
     $this->especialidad = ucwords(strtolower($this->excelHoja->getCell('E'.$column)->getValue()));
     $this->descripcion = '<p>Consultas '.$this->excelHoja->getCell('F'.$column)->getValue().' '.$this->excelHoja->getCell('G'.$column)->getValue().'</p>';   
 
     switch ($this->especialidad) {
+
       case 'Cardiologo':
         $this->especialidad = 1;
         break;
@@ -99,36 +104,157 @@ class EXCEL extends PHPExcel{
         break;
 
       default:
-        $this->especialidad = $this->agregarFacilidad();
+        if ($this->especialidad != ''){
+          if ($this->comprobarFacilidad()) {
+            $this->especialidad = $this->facilidad();
+          }else{
+            $this->especialidad = $this->agregarFacilidad();
+          }
+        }
         break;
     }
 
-    $sql = "SELECT * FROM medico WHERE nombre_med = '$this->nombre' AND sede = '$this->sede'";
-    $consulta = mysql_query($sql) or die (mysql_error());
-    $filas = mysql_num_rows($consulta);
+    if ($this->nombre != '') {
+      if ($this->comprobarMedico()){
+        $this->editarMedico();
+        $this->cantidadNOk++;
+      }else{
+        $this->agregarMedico();
+        $this->cantidadOk++;
+      }
+    }
+  }
 
-    if ($filas == 0){
-      $this->agregarMedico();
-      $this->cantidadOk++;
+  function facilidad() {
+    $sql = 'SELECT id_fac FROM facilidad WHERE nombre_fac = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $this->especialidad);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      $facilidad = $query->fetch();
+
+    }catch(PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+
+    return $facilidad['id_fac'];
+  }
+
+  function agregarFacilidad(){
+    $sql = "INSERT INTO facilidad (nombre_fac) VALUE (?)";
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $this->especialidad);
+
+      $query->execute();
+
+      $id = $this->connection->lastInsertId();
+
+      $this->connection->Close();
+
+    }catch (PDOException $e){
+      echo('Error code: '.$e->getMessage());
+    }
+
+    echo ('Valor de Id en agregarFacilidad: '.$id.'<br>');
+    return $id;
+  }
+
+  function comprobarFacilidad() {
+    $sql = 'SELECT * FROM facilidad WHERE nombre_fac = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $this->especialidad);
+
+      $query->execute();
+
+      $this->connection->Close();
+      
+    }catch(PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+
+    if ($query->fetchColumn() > 0){
+      return true;
     }else{
-      $this->cantidadNOk++;
+      return false;
     }
   }
 
   function agregarMedico(){
-    $sql2 = "INSERT INTO medico (nombre_med, especialidad_med, descripcion_med, sede_med)
-            VALUES ('$this->nombre', '$this->especialidad', '$this->descripcion', '$this->sede')";
-    $consulta2 = mysql_query($sql2) or die(mysql_error());
+    $sql = "INSERT INTO medico (nombre_med, especialidad_med, descripcion_med, sede_med)
+            VALUES (?, ?, ?, ?)";
 
-    $this->mostrarExcel(mysql_insert_id());
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $this->nombre);
+      $query->bindParam(2, $this->especialidad);
+      $query->bindParam(3, $this->descripcion);
+      $query->bindParam(4, $this->sede);
+
+      $query->execute();
+
+      $id = $this->connection->lastInsertId();
+
+      $this->connection->Close();
+    }catch (PDOException $e){
+      echo ('Error code: '.$e->getMessage());
+    }
+    
+    return $id;
   }
 
-  function agregarFacilidad(){
-    $sql = "INSERT INTO facilidad (nombre_fac) VALUES ('$this->especialidad')";
+  function editarMedico(){
+    $sql = "UPDATE medico SET especialidad_med = ?, descripcion_med = ? WHERE nombre_med = ?";
 
-    $consulta = mysql_query($sql) or die(mysql_error());
+    try{
+      $query = $this->connection->prepare($sql);
 
-    return mysql_insert_id();
+      $query->bindParam(1, $this->especialidad);
+      $query->bindParam(2, $this->descripcion);
+      $query->bindParam(3, $this->nombre);
+
+      $query->execute();
+
+      $this->connection->Close();
+    }catch (PDOException $e){
+      echo ('Error code: '.$e->getMessage());
+    }
+  }
+
+  function comprobarMedico() {
+      $sql = "SELECT COUNT(*) FROM medico WHERE nombre_med = ? AND sede = ?";
+
+      try{
+        $query = $this->connection->prepare($sql);
+  
+        $query->bindParam(1, $this->nombre);
+        $query->bindParam(2, $this->sede);
+  
+        $query->execute();
+  
+        $this->connection->Close();
+
+      }catch (PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
+
+      if ($query->fetchColumn() > 0){
+        return true;
+      }else{
+        return false;
+      }
   }
 
   function mostrarExcel($lastId){

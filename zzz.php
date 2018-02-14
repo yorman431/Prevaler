@@ -1,9 +1,9 @@
 <?php
 require('config/setup.php');
 
-include_once('./medicoXls.php');
+include_once('medicoXls.php');
 
-$excel = new EXCEL();
+$excel = new MedicoExcel();
 
 if ($_POST['subir'] == 'Enviar')
   $excel->checkFile();
