@@ -70,6 +70,8 @@ if(!isset($hotel))
 	$hotel = new Hotel();
 $hotel->listar_hotel_imagen();
 
+var_dump($faq->listado);
+
 $smarty->assign("accion", "");
 $smarty->assign("activo", $cont);
 $smarty->assign("mensaje2", $mensaje2);

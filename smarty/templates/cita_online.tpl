@@ -61,7 +61,7 @@
           <select id="sede" name="sede" required="required" onchange="cargar_especialidad();">
             <option selected hidden value="">Seleccione la Sede</option>
             {section name=i  loop=$sede}
-              <option value="{$sede[i].nombre_sede}">{$sede[i].nombre_sede}</option>
+              <option value="{$sede[i].id_sede}">{$sede[i].nombre_sede}</option>
             {/section}
           </select>
         </div>
@@ -94,6 +94,17 @@
         <!--  SI PRESIONA CITA CON POLIZA  -->
 
         <div class="row" id="visible1" style="display: none;">
+
+          <div id="atencion" class="alert" align="left">
+            <strong>Recuerde el día de la cita, traer:</strong> 
+            <br>
+            <ul>
+              <li>Copia de la cédula del titular.</li>
+              <li>Copia de la cédula del paciente o partida de nacimiento del niño o niña.</li>
+              <li>Carnet de trabajo, en caso de pertenecer a pólizas colectivas.</li>
+            </ul>
+          </div>
+
           <div class="form-group no_padding1">
             <i class="fa fa-circle color_naranja" aria-hidden="true"></i>
             <span>Datos de la Póliza</span>

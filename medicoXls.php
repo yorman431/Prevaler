@@ -65,8 +65,8 @@ class MedicoExcel extends PHPExcel {
   function recorrerExcel(){
     $this->sede = $_GET['sede'];
 
-    for($i = 2; $i <= $this->lastRow; $i++){
-      $guia = strtolower($this->excelHoja->getCell('A'.$i)->getValue());
+    for($i = 3; $i <= $this->lastRow; $i++){
+      $guia = strtolower($this->excelHoja->getCell('C'.$i)->getValue());
       
       if ($guia != '')
         $this->cargarProducto($i);
@@ -81,9 +81,9 @@ class MedicoExcel extends PHPExcel {
   }
 
   function cargarProducto($column){
-    $this->nombre = ucwords(strtolower($this->excelHoja->getCell('B'.$column)->getValue()));
+    $this->nombre = ucwords(strtolower($this->excelHoja->getCell('D'.$column)->getValue()).' '.strtolower($this->excelHoja->getCell('C'.$column)->getValue()));
     $this->especialidad = ucwords(strtolower($this->excelHoja->getCell('E'.$column)->getValue()));
-    $this->descripcion = '<p>Consultas '.$this->excelHoja->getCell('F'.$column)->getValue().' '.$this->excelHoja->getCell('G'.$column)->getValue().'</p>';   
+    $this->descripcion = '<p>Consultas '.$this->excelHoja->getCell('K'.$column)->getValue().'</p>';   
 
     switch ($this->especialidad) {
 
