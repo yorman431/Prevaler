@@ -10,8 +10,8 @@
  * en agradecimiento.
  * ----------------------------------------------------------------------------
 */
-include_once("class.link.php");
-include_once('conexion.inc.php');
+include_once("./class.link.php");
+include_once('./conexion.inc.php');
 
 class Contenido{
 
@@ -127,19 +127,53 @@ class Contenido{
       $sub=$_GET['sub'];
 
       $sql = "SELECT * FROM contenido WHERE enlace_con = ? AND subenlace_con = ?";
-      $restriccion="'$tipo'=enlace_con AND subenlace_con='$sub'";
-    }else{
-      $restriccion="'$tipo'=enlace_con AND subenlace_con='1'";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $tipo);
+        $query->bindParam(2, $sub);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($contenidos = $query->fetchAll())
+          $this->mensaje = 'si';
+
+      }catch(PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
+    } else {
+      $sub = 1;
+
+      $sql = "SELECT * FROM contenido WHERE enlace_con = ? AND subenlace_con = ?";
+
+      try{
+        $query = $this->connection->prepare($sql);
+
+        $query->bindParam(1, $tipo);
+        $query->bindParam(2, $sub);
+
+        $query->execute();
+
+        $this->connection->Close();
+
+        if ($contenidos = $query->fetchAll())
+          $this->mensaje = 'si';
+
+      }catch(PDOException $e){
+        echo 'Error code: '.$e->getMessage();
+      }
     }
-    $sql="SELECT * FROM contenido WHERE $restriccion GROUP BY id_con ORDER BY prioridad_con ASC";
-    $consulta=mysql_query($sql) or die(mysql_error());
-    while ($resultado = mysql_fetch_array($consulta)){
-      $this->mensaje="si";
-      $resultado['enlace_con']=$this->get_enlace($resultado['enlace_con']);
-      $resultado['subenlace_con']=$this->get_subenlace($resultado['subenlace_con']);
-      $resultado['fecha_con']=$this->convertir_fecha($resultado['fecha_con']);
-      $this->listado[] = $resultado;
+    
+    foreach ($contenidos as &$contenido){
+      $contenido['enlace_con'] = $this->get_enlace($contenido['enlace_con']);
+      $contenido['subenlace_con']=$this->get_subenlace($contenido['subenlace_con']);
+      $contenido['fecha_con']=$this->convertir_fecha($contenido['fecha_con']);
     }
+
+    $this->listado = $contenidos;
   }
 
   function listar_contenido_select($tipo){
@@ -160,8 +194,6 @@ class Contenido{
         $resultado['fecha_con']=$this->convertir_fecha($resultado['fecha_con']);
         $this->listado[] = $resultado;
       }
-
-
     }
   }
 

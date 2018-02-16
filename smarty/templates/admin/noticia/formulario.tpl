@@ -77,28 +77,13 @@
 
                                           <div class="form-group">
                                           <label for="fecha">Fecha</label>
-                                          <!--<div class='input-group date' id='datetimepicker'>-->
-                                          <input name="fecha" type="text" class="form-control"  placeholder="xx/xx/xxxx" id="fecha" value="{$fecha}"/>
-                                          <!--</div>-->
-                                          <!--<span class="input-group-addon" style="background-color:transparent; border:transparent; color:#fff;">
-                                               <span class="glyphicon glyphicon-calendar"></span>
-                                          </span>-->
-                                          {literal}
-                                            <!--    <script type="text/javascript">
-                                                    $(function () {
-                                                    $('#datetimepicker').datetimepicker({
-                                                    format: 'DD/MM/YYYY'
-                                                    });
-                                                });
-                                                </script>-->
-                                         {/literal}
-
+                                          <div class='input-group date'>
+                                          <input name="fecha" type="text" class="form-control"  placeholder="xx/xx/xxxx" id="datetimepicker" value="{$fecha}"/>
+                                          </div>
+  
                                           </div>
 
-                                          <div class="form-group">
-                                          <label for="hora">Hora</label>
-                                          <!--<div class='input-group date' id='datetimepicker'>-->
-                                          <input name="hora" type="text" class="form-control"  placeholder="hh:mm:ss" id="hora" value="{$hora}"/></div>
+    
 
                                           <div class="form-group">
                                           <label for="contenido">Contenido</label>
@@ -140,10 +125,16 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-
+    {literal}
+    <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker').datetimepicker({
+        format: 'DD/MM/YYYY'
+        });
+    });
+    </script>
+    {/literal}
     <!-- Bootstrap Core JavaScript -->
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>

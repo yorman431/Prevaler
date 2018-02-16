@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-01-22 15:17:22
+/* Smarty version 3.1.29, created on 2018-02-16 19:02:59
   from "D:\Websites\Prevaler\smarty\templates\admin\noticia\lista_noticia.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a6600824c13c5_34520269',
+  'unifunc' => 'content_5a872ae3c42aa9_73555368',
   'file_dependency' => 
   array (
     'cf2eca855f83ba00238e5f540473534580734f03' => 
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:admin/layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a6600824c13c5_34520269 ($_smarty_tpl) {
+function content_5a872ae3c42aa9_73555368 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

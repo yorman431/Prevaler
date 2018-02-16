@@ -413,6 +413,25 @@ class Hotel{
     }
   }
 
+  function mostrarServicio ( $sede ) {
+    $sql = 'SELECT * FROM serviciosede WHERE id_sede = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam( 1, $sede );
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      return $query->fetchAll();
+
+    }catch( PDOException $e ){
+      echo 'Error code: '.$e->getMessage();
+    }
+  }
+
   function mostrar_hotel_publico($id){
     /*Metodo para mostrar un usuario seleccionado */
     $sql="SELECT * FROM sede WHERE id_sede='$id'";

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 16:47:02
+/* Smarty version 3.1.29, created on 2018-02-16 17:12:57
   from "D:\Websites\Prevaler\smarty\templates\cita_online.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7496061299d4_59073045',
+  'unifunc' => 'content_5a871119e89ea3_62227732',
   'file_dependency' => 
   array (
     '44b70a6b8c974fbf3e23996aeb8ff14e041a54e0' => 
     array (
       0 => 'D:\\Websites\\Prevaler\\smarty\\templates\\cita_online.tpl',
-      1 => 1516996301,
+      1 => 1518719034,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layout/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a7496061299d4_59073045 ($_smarty_tpl) {
+function content_5a871119e89ea3_62227732 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -101,7 +101,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_0_total != 0) {
 for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_0_iteration <= $__section_i_0_total; $__section_i_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
-              <option value="<?php echo $_smarty_tpl->tpl_vars['sede']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_sede'];?>
+              <option value="<?php echo $_smarty_tpl->tpl_vars['sede']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_sede'];?>
 "><?php echo $_smarty_tpl->tpl_vars['sede']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_sede'];?>
 </option>
             <?php
@@ -142,6 +142,17 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
         <!--  SI PRESIONA CITA CON POLIZA  -->
 
         <div class="row" id="visible1" style="display: none;">
+
+          <div id="atencion" class="alert" align="left">
+            <strong>Recuerde el día de la cita, traer:</strong> 
+            <br>
+            <ul>
+              <li>Copia de la cédula del titular.</li>
+              <li>Copia de la cédula del paciente o partida de nacimiento del niño o niña.</li>
+              <li>Carnet de trabajo, en caso de pertenecer a pólizas colectivas.</li>
+            </ul>
+          </div>
+
           <div class="form-group no_padding1">
             <i class="fa fa-circle color_naranja" aria-hidden="true"></i>
             <span>Datos de la Póliza</span>

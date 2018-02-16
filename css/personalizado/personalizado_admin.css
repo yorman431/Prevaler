@@ -492,15 +492,14 @@ footer{
 	float: left;
     padding: 2px;
     margin: 2px;
-    width: 148px;
-    height: 25px;
+    width: 25rem;
     background-color: #eee;
     border: thin #ddd solid;
 }
 
 .nombre_especialidad{
 	float: left;
-    width: 128px;
+	width: 23rem;
     height: 20px;
 }
 

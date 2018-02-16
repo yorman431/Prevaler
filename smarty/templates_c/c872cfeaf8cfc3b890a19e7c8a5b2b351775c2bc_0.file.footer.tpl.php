@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-09 17:51:18
+/* Smarty version 3.1.29, created on 2018-02-16 18:53:48
   from "D:\Websites\Prevaler\smarty\templates\layout\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7ddf96a32645_11584969',
+  'unifunc' => 'content_5a8728bc6da8f7_25985922',
   'file_dependency' => 
   array (
     'c872cfeaf8cfc3b890a19e7c8a5b2b351775c2bc' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7ddf96a32645_11584969 ($_smarty_tpl) {
+function content_5a8728bc6da8f7_25985922 ($_smarty_tpl) {
 ?>
 <!-- Pie de Página
 ================================================== -->

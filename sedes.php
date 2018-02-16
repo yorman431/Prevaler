@@ -62,9 +62,11 @@ $publicidad2->cargar_publicidad("Publicidad 2");
 if(!isset($hotel))
 	$hotel = new Hotel();
 $hotel->mostrar_hotel_img();
+$servicios = $hotel->mostrarServicio($_GET['id']);
 
 $facilidad = new Hotel;
 $facilidad->listar_facilidad_hotel2($_GET['id']);
+
 
 if(!isset($medico))
 	$medico= new Medico;
@@ -162,6 +164,7 @@ $smarty->assign("longitud", $hotel->longitud);
 $smarty->assign("fecha", $hotel->fecha);
 //$smarty->assign("facilidad", $facilidad->listado);
 $smarty->assign("listado", $hotel->listado);
+$smarty->assign('servicios', $servicios);
 $smarty->assign("enlaces_A", $link->listado);
 $smarty->assign("banner1", $banner1->listado);
 $smarty->assign("banner2", $banner2->listado);
@@ -172,5 +175,3 @@ $smarty->assign("mapas", $mapas);
 $smarty->assign("medico", $medico->listado);
 $smarty->force_compile=true;
 $smarty->display('sedes.tpl');
-/* Fin footer para Smarty */
-?>

@@ -145,122 +145,25 @@
       <span class="fuente_morada">NUESTROS SERVICIOS</span>
     </div>
 
+    {foreach $servicios as $servicio}
 
     <div class="col-xs-12 col-md-6">
       <div class="row">
         <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
           <div class="panel-heading">
             <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Asistencia Médica Integral</span>
+            <span>{$servicio.titulo}</span>
           </div>
           <div class="panel-body">
             <p>
-              Contamos con médicos calificados de familia e internistas, soportados por 
-              nuestro equipo de médicos especialistas y sub-especialistas, todos de 
-              amplia experiencia.
+              {$servicio.descripcion}
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Atención Médica Ambulatoria</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              En nuestros centros usted podrá realizarse procedimientos de rutina 
-              ambulatorios con la atención de calificadas enfermeras, tales como: 
-              mediciones de tensión y temperatura, nebulizaciones, colocación de 
-              inyecciones, tratamientos intravenosos e hidratación entre otras.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Medicina Ocupacional</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Este servicio está orientado para aquellas empresas que requieran realizar 
-              estudios para sus empleados así como a los aspirantes a cargos. 
-              Para ello contamos con especialistas que realizan evaluaciones de 
-              pre-empleo, post-empleo, pre-vacacional, post- vacacional y 
-              exámenes periódicos de salud o tutoriales.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Laboratorio General y Especializado</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Nos preocupamos en ofrecer al médico y al paciente pruebas de alta 
-              confiabilidad, gracias a la constante modernización de los equipos t
-              ecnológicos y a sus profesionales altamente calificados. Realizamos los 
-              diferentes exámenes de rutina y pruebas especiales.
-              Contamos con unidades tanto en nuestras sedes de Valencia de la 
-              Urb. Camoruco y en Maracay.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-        <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Radiología General</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Realizamos las diferentes imágenes de radiología como apoyo al 
-              diagnóstico de nuestros médicos. Contamos con equipos de última 
-              generación. Nuestro equipo médico está conformado por profesionales 
-              altamente capacitados en el área de imagenología.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Ecografía</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Realizamos estudios convencionales en general, como: ecosonogramas 
-              abdominales, pélvicos y renales y estudios especiales tales como: doppler 
-              renales, hepáticos, músculo esqueléticos, mamarios, tiroideo, prostático, 
-              testicular y partes blandas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    {/foreach}
 
     <div class="col-xs-12">
       <button href="" onclick="history.back()" class="btn-info">VOLVER</button>

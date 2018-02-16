@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-01-22 14:56:32
+/* Smarty version 3.1.29, created on 2018-02-16 19:31:31
   from "D:\Websites\Prevaler\smarty\templates\admin\noticia\formulario.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a65fba01046a8_06541777',
+  'unifunc' => 'content_5a873193ad7ad6_95917173',
   'file_dependency' => 
   array (
     '7a625a7f88be35d2f190006aa3cf469f128db651' => 
     array (
       0 => 'D:\\Websites\\Prevaler\\smarty\\templates\\admin\\noticia\\formulario.tpl',
-      1 => 1505325208,
+      1 => 1518809487,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:admin/layouts/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a65fba01046a8_06541777 ($_smarty_tpl) {
+function content_5a873193ad7ad6_95917173 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -125,32 +125,14 @@ echo $_smarty_tpl->tpl_vars['mensaje']->value;
 
                                           <div class="form-group">
                                           <label for="fecha">Fecha</label>
-                                          <!--<div class='input-group date' id='datetimepicker'>-->
-                                          <input name="fecha" type="text" class="form-control"  placeholder="xx/xx/xxxx" id="fecha" value="<?php echo $_smarty_tpl->tpl_vars['fecha']->value;?>
+                                          <div class='input-group date'>
+                                          <input name="fecha" type="text" class="form-control"  placeholder="xx/xx/xxxx" id="datetimepicker" value="<?php echo $_smarty_tpl->tpl_vars['fecha']->value;?>
 "/>
-                                          <!--</div>-->
-                                          <!--<span class="input-group-addon" style="background-color:transparent; border:transparent; color:#fff;">
-                                               <span class="glyphicon glyphicon-calendar"></span>
-                                          </span>-->
-                                          
-                                            <!--    <?php echo '<script'; ?>
- type="text/javascript">
-                                                    $(function () {
-                                                    $('#datetimepicker').datetimepicker({
-                                                    format: 'DD/MM/YYYY'
-                                                    });
-                                                });
-                                                <?php echo '</script'; ?>
->-->
-                                         
-
+                                          </div>
+  
                                           </div>
 
-                                          <div class="form-group">
-                                          <label for="hora">Hora</label>
-                                          <!--<div class='input-group date' id='datetimepicker'>-->
-                                          <input name="hora" type="text" class="form-control"  placeholder="hh:mm:ss" id="hora" value="<?php echo $_smarty_tpl->tpl_vars['hora']->value;?>
-"/></div>
+    
 
                                           <div class="form-group">
                                           <label for="contenido">Contenido</label>
@@ -196,14 +178,18 @@ echo $_smarty_tpl->tpl_vars['mensaje']->value;
     <!-- /#wrapper -->
 
     <!-- jQuery -->
+    
     <?php echo '<script'; ?>
- src="/bower_components/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
+ type="text/javascript">
+        $(function () {
+        $('#datetimepicker').datetimepicker({
+        format: 'DD/MM/YYYY'
+        });
+    });
+    <?php echo '</script'; ?>
 >
-
+    
     <!-- Bootstrap Core JavaScript -->
-    <?php echo '<script'; ?>
- src="/bower_components/bootstrap/dist/js/bootstrap.min.js"><?php echo '</script'; ?>
->
 
     <!-- Metis Menu Plugin JavaScript -->
     <?php echo '<script'; ?>

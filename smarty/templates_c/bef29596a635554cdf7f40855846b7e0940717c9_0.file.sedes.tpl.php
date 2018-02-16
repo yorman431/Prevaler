@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-09 17:51:16
+/* Smarty version 3.1.29, created on 2018-02-16 18:53:47
   from "D:\Websites\Prevaler\smarty\templates\sedes.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7ddf947e7be0_14777896',
+  'unifunc' => 'content_5a8728bbcef528_61368632',
   'file_dependency' => 
   array (
     'bef29596a635554cdf7f40855846b7e0940717c9' => 
     array (
       0 => 'D:\\Websites\\Prevaler\\smarty\\templates\\sedes.tpl',
-      1 => 1516997474,
+      1 => 1518807218,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layout/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a7ddf947e7be0_14777896 ($_smarty_tpl) {
+function content_5a8728bbcef528_61368632 ($_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -287,122 +287,44 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_4_saved;
       <span class="fuente_morada">NUESTROS SERVICIOS</span>
     </div>
 
+    <?php
+$_from = $_smarty_tpl->tpl_vars['servicios']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_servicio_0_saved_item = isset($_smarty_tpl->tpl_vars['servicio']) ? $_smarty_tpl->tpl_vars['servicio'] : false;
+$_smarty_tpl->tpl_vars['servicio'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['servicio']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['servicio']->value) {
+$_smarty_tpl->tpl_vars['servicio']->_loop = true;
+$__foreach_servicio_0_saved_local_item = $_smarty_tpl->tpl_vars['servicio'];
+?>
 
     <div class="col-xs-12 col-md-6">
       <div class="row">
         <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
           <div class="panel-heading">
             <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Asistencia Médica Integral</span>
+            <span><?php echo $_smarty_tpl->tpl_vars['servicio']->value['titulo'];?>
+</span>
           </div>
           <div class="panel-body">
             <p>
-              Contamos con médicos calificados de familia e internistas, soportados por 
-              nuestro equipo de médicos especialistas y sub-especialistas, todos de 
-              amplia experiencia.
+              <?php echo $_smarty_tpl->tpl_vars['servicio']->value['descripcion'];?>
+
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Atención Médica Ambulatoria</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              En nuestros centros usted podrá realizarse procedimientos de rutina 
-              ambulatorios con la atención de calificadas enfermeras, tales como: 
-              mediciones de tensión y temperatura, nebulizaciones, colocación de 
-              inyecciones, tratamientos intravenosos e hidratación entre otras.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Medicina Ocupacional</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Este servicio está orientado para aquellas empresas que requieran realizar 
-              estudios para sus empleados así como a los aspirantes a cargos. 
-              Para ello contamos con especialistas que realizan evaluaciones de 
-              pre-empleo, post-empleo, pre-vacacional, post- vacacional y 
-              exámenes periódicos de salud o tutoriales.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Laboratorio General y Especializado</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Nos preocupamos en ofrecer al médico y al paciente pruebas de alta 
-              confiabilidad, gracias a la constante modernización de los equipos t
-              ecnológicos y a sus profesionales altamente calificados. Realizamos los 
-              diferentes exámenes de rutina y pruebas especiales.
-              Contamos con unidades tanto en nuestras sedes de Valencia de la 
-              Urb. Camoruco y en Maracay.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-        <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Radiología General</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Realizamos las diferentes imágenes de radiología como apoyo al 
-              diagnóstico de nuestros médicos. Contamos con equipos de última 
-              generación. Nuestro equipo médico está conformado por profesionales 
-              altamente capacitados en el área de imagenología.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-md-6">
-      <div class="row">
-        <div class="panel-default col-xs-10 col-xs-push-1 col-xs-pull-1">
-          <div class="panel-heading">
-            <img class="img-responsive hidden-xs" src="imagenes/happy.png">
-            <span>Servicio de Ecografía</span>
-          </div>
-          <div class="panel-body">
-            <p>
-              Realizamos estudios convencionales en general, como: ecosonogramas 
-              abdominales, pélvicos y renales y estudios especiales tales como: doppler 
-              renales, hepáticos, músculo esqueléticos, mamarios, tiroideo, prostático, 
-              testicular y partes blandas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <?php
+$_smarty_tpl->tpl_vars['servicio'] = $__foreach_servicio_0_saved_local_item;
+}
+if ($__foreach_servicio_0_saved_item) {
+$_smarty_tpl->tpl_vars['servicio'] = $__foreach_servicio_0_saved_item;
+}
+?>
 
     <div class="col-xs-12">
       <button href="" onclick="history.back()" class="btn-info">VOLVER</button>
