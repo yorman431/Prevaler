@@ -69,7 +69,7 @@
             <!-- /.panel-heading -->
             <div class="panel-body">
               <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-12 col-md-12">
                   {if $mensaje neq ""}{$mensaje}{/if}
                   <form action="" method="post" name="form1" id="form1" onsubmit="MM_validateForm('nombre','','R','f_date_c','','R');return document.MM_returnValue">
 
@@ -193,7 +193,7 @@
 
                     <div class="form-group group-speciality">
                       <label for="especialidad">Especialidades</label>
-                      <div>
+                      <div id="especialidad">
                         {section name=i loop=$especialidad}
                         <div class="especialidad_admin">
                           <div class="nombre_especialidad">
@@ -220,7 +220,8 @@
                     </div>
                   </form>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="clearfix"></div>
+                <div class="col-lg-12 col-md-12">
                   <div class="well">
                     <h4>Información adicional sobre la creación de Sedes</h4>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore

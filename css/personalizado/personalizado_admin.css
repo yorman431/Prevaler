@@ -490,11 +490,11 @@ footer{
 
 .especialidad_admin{
 	float: left;
-    padding: 2px;
-    margin: 2px;
-    width: 25rem;
-    background-color: #eee;
-    border: thin #ddd solid;
+	padding: 2px;
+	margin: 2px;
+	width: 25rem;
+	background-color: #eee;
+	border: thin #ddd solid;
 }
 
 .nombre_especialidad{
