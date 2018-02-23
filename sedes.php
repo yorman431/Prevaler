@@ -162,7 +162,6 @@ $smarty->assign("principal", $hotel->principal);
 $smarty->assign("latitud", $hotel->latitud);
 $smarty->assign("longitud", $hotel->longitud);
 $smarty->assign("fecha", $hotel->fecha);
-//$smarty->assign("facilidad", $facilidad->listado);
 $smarty->assign("listado", $hotel->listado);
 $smarty->assign('servicios', $servicios);
 $smarty->assign("enlaces_A", $link->listado);

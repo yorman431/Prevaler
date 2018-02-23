@@ -98,27 +98,57 @@ class Medico{
 
   function listar_medico_publico($sede){
 
-    $sql="SELECT * FROM medico, imagen WHERE sede_med = ? AND id_med = galeria_image AND tabla_image = ? ORDER BY orden_med ASC";
+    $sql="SELECT * FROM medico WHERE sede_med = ? ORDER BY orden_med ASC";
 
-    $tabla = 'medico';
     try{
       $query = $this->connection->prepare($sql);
 
       $query->bindParam(1, $sede);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      if ($medicos = $query->fetchAll()){
+        $this->mensaje = 'si';
+      }
+    }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+
+    foreach ( $medicos as &$medico ) {
+      $medico['imagenes'] = $this->imagenMedico($medico['id_med']);
+    }
+
+    $this->listado = $medicos;
+  }
+
+  function imagenMedico($id) {
+    $tabla = 'medico';
+    $sql = 'SELECT directorio_image FROM imagen WHERE galeria_image = ? AND tabla_image = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $id);
       $query->bindParam(2, $tabla);
 
       $query->execute();
 
       $this->connection->Close();
 
-      if ($this->listado = $query->fetchAll()){
-        $this->mensaje = 'si';
-      }
+      $imagen = $query->fetch(PDO::FETCH_ASSOC);
+
     }catch (PDOException $e){
       echo 'Error code: '.$e->getMessage();
     }
-  }
 
+    if (isset($imagen)) {
+      return $imagen['directorio_image'];
+    } else {
+      return '';
+    }
+  }
 
   function listar_medico_imagen($tipo){
     /* Metodo para listar los usuarios y sus opciones. */

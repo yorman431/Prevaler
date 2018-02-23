@@ -51,7 +51,6 @@ class Noticia{
     $this->subtitulo=$_POST['subtitulo'];
     $this->contenido=$_POST['contenido'];
     $this->fecha=$_POST['fecha'];
-    $this->hora=$_POST['hora'];
     $this->autor=$_POST['autor'];
   }
 
@@ -191,8 +190,8 @@ class Noticia{
           echo 'Error code: '.$e->getMessage();
         }
 
-        $noticia['titulo_not'] = ucwords(strtolower($noticia['titulo_not']));
-        $noticia['subtitulo_not'] = ucwords(strtolower($noticia['subtitulo_not']));
+        $noticia['titulo_not'] = $noticia['titulo_not'];
+        $noticia['subtitulo_not'] = $noticia['subtitulo_not'];
         $noticia['fecha_not'] = $this->convertir_fecha($noticia['fecha_not']);
         $noticia['contenido_not'] = strip_tags($noticia['contenido_not']);
       }
@@ -277,20 +276,39 @@ class Noticia{
   function get_noticia($id){
     /*Metodo para obtener el nombre de una categoria */
     $tabla = 'noticia';
-    $sql="SELECT * FROM noticia, imagen WHERE id_not = ? AND id_not = galeria_image AND tabla_image = ?";
+    $sql = "SELECT * FROM noticia WHERE id_not = ?";
 
     try{
       $query = $this->connection->prepare($sql);
 
       $query->bindParam(1, $id);
-      $query->bindParam(2,$tabla);
 
       $query->execute();
 
       $this->connection->Close();
 
-      $this->listado = $query->fetchAll();
+      $this->listado = $query->fetch();
     }catch (PDOException $e){
+      echo 'Error code: '.$e->getMessage();
+    }
+  }
+
+  function cargarImagen($id) {
+    $tabla = 'noticia';
+    $sql = 'SELECT * FROM imagen WHERE galeria_image = ? AND tabla_image = ?';
+
+    try{
+      $query = $this->connection->prepare($sql);
+
+      $query->bindParam(1, $id);
+      $query->bindParam(2, $tabla);
+
+      $query->execute();
+
+      $this->connection->Close();
+
+      return $query->fetchAll();
+    }catch(PDOException $e) {
       echo 'Error code: '.$e->getMessage();
     }
   }
@@ -302,8 +320,8 @@ class Noticia{
       $this->fecha = $this->convertir_fecha($this->fecha);
 
 
-      $sql="INSERT INTO noticia (categoria_not, titulo_not, subtitulo_not, contenido_not, fecha_not, hora_not, autor_not) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+      $sql="INSERT INTO noticia (categoria_not, titulo_not, subtitulo_not, contenido_not, fecha_not, autor_not) 
+            VALUES (?, ?, ?, ?, ?, ?)";
 
       try{
         header("location:/admin/noticia/");
@@ -315,8 +333,7 @@ class Noticia{
         $query->bindParam(3, $this->subtitulo);
         $query->bindParam(4, $this->contenido);
         $query->bindParam(5, $this->fecha);
-        $query->bindParam(6, $this->hora);
-        $query->bindParam(7, $this->autor);
+        $query->bindParam(6, $this->autor);
 
         $query->execute();
 
@@ -340,7 +357,6 @@ class Noticia{
                 subtitulo_not = ?,
                 contenido_not = ?,
                 fecha_not = ?,
-                hora_not = ?,
                 autor_not = ?
               WHERE id_not = ?";
 
@@ -354,9 +370,8 @@ class Noticia{
         $query->bindParam(3, $this->subtitulo);
         $query->bindParam(4, $this->contenido);
         $query->bindParam(5, $this->fecha);
-        $query->bindParam(6, $this->hora);
-        $query->bindParam(7, $this->autor);
-        $query->bindParam(8, $_GET['id']);
+        $query->bindParam(6, $this->autor);
+        $query->bindParam(7, $_GET['id']);
 
         $query->execute();
 

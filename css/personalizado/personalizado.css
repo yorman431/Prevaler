@@ -34,6 +34,10 @@
 
   /*-------- Botonera ---------*/
 
+  .padbot-2 {
+    padding-bottom: 2rem;
+  }
+
   .navbar-collapse > .navbar-nav > li > a,
   .navbar-default .navbar-nav > .active > a{
     font-size: 16px;
@@ -2062,11 +2066,6 @@ hr{
 .noticias{
   margin-bottom: 50px;
   margin-top: 90px;
-}
-
-
-.noticias > .col-xs-10{
-  margin: 50px 0px 50px 0px;
 }
 
 .noticias .panel-body{

@@ -9,12 +9,19 @@
 	class Connection extends PDO{
 		
 		var $driver = 'mysql:';
+		var $dbConnect;
+		
 		var $host = 'localhost';
 		var $dbName = 'prevaler';
 		var $username = 'root';
 		var $password = 'root';
-		var $dbConnect;
 		
+	/*
+		var $host = 'localhost';
+		var $dbName = 'diazcrea_prevaler';
+		var $username = 'diazcrea_ARMT';
+		var $password = '-lg=NN?[}fPb';
+		*/
 		function __construct(){
 			try{
 				$this->dbConnect = parent::__construct ("$this->driver host=$this->host; dbname=$this->dbName", $this->username, $this->password);

@@ -2,33 +2,7 @@
 <html lang="en"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
 
 {include file='admin/layouts/head2.tpl'}
-{literal}
-<link rel="stylesheet" type="text/css" media="all" href="/calendario/calendar-blue.css" title="blue" />
-<script type="text/javascript" src="/calendario/calendar.js"></script>
-<script type="text/javascript" src="/calendario/lang/calendar-en.js"></script>
-<script type="text/javascript" src="/calendario/calendar-setup.js"></script>
-<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="/ckfinder/ckfinder.js"></script>
-<script type="text/javascript">
-	window.onload = function()
-	{
-		CKEDITOR.replace( 'contenido',
-			{
-		toolbar :
-			[
-            		['Font','FontSize','TextColor','RemoveFormat','-','Table','Image','Source','Templates' ],'/',
 
-            		['Bold', 'Italic','Underline', '-', 'NumberedList', 'BulletedList', '-', 'Link','Unlink'],['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],['Maximize', 'ShowBlocks']
-
-        		]
-
-    		}
-		);
-	};
-</script>
-
-{/literal}
-<!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -65,12 +39,12 @@
 									<form action="" method="post" name="form1" id="form1" onsubmit="MM_validateForm('nombre','','R','f_date_c','','R');return document.MM_returnValue">
 										<div class="form-group">
 											<label for="nombre">Nombre</label>
-											<input onkeypress="javascripts: return validarletrasnum(event);" name="nombre" type="text" class="form-control" id="nombre" value="{$nombres}"  maxlength="100" />
+											<input name="nombre" class="form-control" id="nombre" value="{$nombres}"  maxlength="100" />
 										</div>
 						
 										<div class="form-group">
 											<label for="nombre">Etiqueta</label>
-											<input name="etiqueta" type="text" class="form-control" id="etiqueta" value="{$etiqueta}"  maxlength="100" />
+											<input name="etiqueta" class="form-control" id="etiqueta" value="{$etiqueta}"  maxlength="100" />
 										</div>
 										<div class="form-group">
 											<a href="index.php" class="btn btn-md btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> Ir atr&aacute;s</a>

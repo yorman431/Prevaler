@@ -469,10 +469,10 @@ class Auth {
         $correo_envio="presupuesto.porlamar@prevaler.com";
         break;
       case '2':
-        $correo_envio="presupuesto.porlamar@prevaler.com";
+        $correo_envio="presupuesto.caracas@prevaler.com";
         break;
       case '3':
-        $correo_envio="presupuesto.caracas@prevaler.com";
+        $correo_envio="presupuesto.maracay@prevaler.com";
         break;
       case '4':
         $correo_envio="presupuesto.valencia@prevaler.com";

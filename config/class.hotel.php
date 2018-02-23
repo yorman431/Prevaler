@@ -903,7 +903,7 @@ class Hotel{
     /* Metodo para listar los facilidades y sus opciones. */
     $sql="SELECT id_fac, nombre_fac,etiqueta_fac, id_fac AS directorio_image, id_fac AS nombre_image FROM facilidad, sede, tiene 
 					WHERE id_sede = ? AND id_sede = hotel_rel AND id_fac = facilidad_rel 
-					GROUP BY id_fac ORDER BY id_fac ASC";
+					GROUP BY id_fac ORDER BY nombre_fac ASC";
 
     try{
       $query = $this->connection->prepare($sql);

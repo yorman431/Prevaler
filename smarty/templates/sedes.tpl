@@ -73,7 +73,7 @@
 
     <div class="col-xs-10 col-xs-push-1 col-xs-pull-1 no_padding1">
       <div class="row">
-        <div class="col-xs-5 col-md-4 col-lg-2" align="left">
+        <div class="col-xs-5 col-md-4" align="left">
           <div class="row especialidades">
                 <div class="col-xs-12">
                   <ul class="nav" id="side-menu">
@@ -82,7 +82,7 @@
 
                       {assign var="cont" value=$cont+1}
                       <li>
-                        <a id="{$especialidad[i].id_fac}" onclick="javascript: return faq3();" style="cursor:pointer;" {if $cont eq '1' } class="no-push btn-push" {else} class="no-push"{/if}>
+                        <a href="#medicos" id="{$especialidad[i].id_fac}" onclick="javascript: return faq3();" style="cursor:pointer;" {if $cont eq '1' } class="no-push btn-push transicion" {else} class="no-push transicion"{/if}>
                           {$especialidad[i].nombre_fac}
                           <i class="fa fa-chevron-right" aria-hidden="true"></i>
                           <ul class="hidden-md hidden-lg">
@@ -97,7 +97,7 @@
           </div>
         </div>
 
-        <div class="col-xs-7 col-md-8 col-lg-9 ver_medico">
+        <div class="col-xs-7 col-md-8 ver_medico" id = "medicos">
           <div id="default" class="row" style="display: block;">
 
               {assign var="cont" value=0}            
